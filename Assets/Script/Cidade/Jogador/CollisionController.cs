@@ -8,6 +8,7 @@ public class CollisionController : MonoBehaviour
 {
     public bool abriuLoja;
     public PlayerMovement_Cidade mov;
+    public Minigames_UI uiMinigames;
     
     void Start(){
         abriuLoja = false;
@@ -16,11 +17,10 @@ public class CollisionController : MonoBehaviour
 void OnCollisionStay2D(Collision2D col)
     {
         // Animação de exclamação
-       if(col.gameObject.name == "Lojinha" && Input.GetKeyDown(KeyCode.E) && !abriuLoja){
-            // Levar pra outra cena
-            abriuLoja = true;
-            mov.isAllowed = false;
-            SceneManager.LoadScene("Loja", LoadSceneMode.Additive);
+       if(col.gameObject.name == "Lojinha" && Input.GetKey(KeyCode.E) && !uiMinigames.minigamesPanel.activeSelf){
+        Debug.Log("abriu");
+            uiMinigames.ToggleCanvas();
        }
     }
+  
 }
