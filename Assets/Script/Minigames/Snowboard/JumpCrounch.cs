@@ -5,25 +5,27 @@ using UnityEngine;
 public class JumpCrounch : MonoBehaviour
 {
 
-    public float duration = 1;
+    public float duration = 1f;
 
     public bool idle = true;
     public bool jump = false;
     public bool crounch = false;
 
     public float action;
+    public float teste = 0f;
 
     // Update is called once per frame
     void Update()
     {
         action = Input.GetAxisRaw("Vertical");
-        if(action == 1)
+        if(action == 1f)
         {
-            Jump();
+            teste = 1f;
+            StartCoroutine(Jump());
         }
-        if (action == -1)
+        if (action == -1f)
         {
-            Crounch();
+            StartCoroutine(Crounch());
         }
     }
 
@@ -33,7 +35,7 @@ public class JumpCrounch : MonoBehaviour
         {
             idle = false;
             jump = true;
-            yield return new WaitForSeconds(duration);
+            yield return new WaitForSeconds(1);
             idle = true;
             jump = false;
         }
@@ -45,7 +47,7 @@ public class JumpCrounch : MonoBehaviour
         {
             idle = false;
             crounch = true;
-            yield return new WaitForSeconds(duration);
+            yield return new WaitForSeconds(1);
             idle = true;
             crounch = false;
         }
