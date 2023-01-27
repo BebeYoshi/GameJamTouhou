@@ -7,7 +7,8 @@ public static class Info_Player
     private static int p_coins = 0;
     private static int p_score_snowboard = 0;
 
-    public static int coins{
+    public static int coins
+    {
         get { return p_coins; }
         set { p_coins  = value; }
     }

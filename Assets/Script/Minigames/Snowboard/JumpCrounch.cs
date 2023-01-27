@@ -7,20 +7,24 @@ public class JumpCrounch : MonoBehaviour
 
     public float duration = 1f;
 
-    public bool idle = true;
-    public bool jump = false;
-    public bool crounch = false;
+    public bool idle;
+    public bool jump;
+    public bool crounch;
 
     public float action;
-    public float teste = 0f;
 
-    // Update is called once per frame
+    void Start()
+    {
+        idle = true;
+        jump = false;
+        crounch = false;
+    }
+
     void Update()
     {
         action = Input.GetAxisRaw("Vertical");
         if(action == 1f)
         {
-            teste = 1f;
             StartCoroutine(Jump());
         }
         if (action == -1f)

@@ -22,15 +22,13 @@ public class CollisionController_Object : MonoBehaviour
             {
                 return;
             }
-            Debug.Log("morreu");
+            col.gameObject.GetComponent<PlayerLife>().LoseLife();
         }
-    }
-
-    void OnCollisionExit2D(Collision2D col)
-    {
-        if(col.gameObject.name == "Score_marker")
+        if (col.gameObject.name == "Score_marker")
         {
-               
+            col.gameObject.GetComponent<Point_count>().score += 200;
+            col.gameObject.GetComponent<Point_count>().textoScore = col.gameObject.GetComponent<Point_count>().score.ToString();
+            Destroy(gameObject);
         }
     }
 }
