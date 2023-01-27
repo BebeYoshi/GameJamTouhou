@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class CollisionController_NPC : MonoBehaviour
 {
-    public Minigames_UI uiMinigames;
+    public Npc_UI uiNpc;
     
     void Start(){
     }
@@ -14,9 +14,9 @@ public class CollisionController_NPC : MonoBehaviour
 void OnCollisionStay2D(Collision2D col)
     {
         // Animação de exclamação
-       if(col.gameObject.name == "Player" && Input.GetKey(KeyCode.E) && !uiMinigames.minigamesPanel.activeSelf){
+       if(col.gameObject.name == "Player" && Input.GetKey(KeyCode.E) && !uiNpc.npcPanel.activeSelf){
         Debug.Log("abriu");
-            uiMinigames.ToggleCanvas();
+            uiNpc.ToggleCanvas();
        }
     }
   

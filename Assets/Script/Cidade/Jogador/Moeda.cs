@@ -7,16 +7,21 @@ public class Moeda : MonoBehaviour
 {
    public TMP_Text textoMoedas;
    public int moedas;
+    public TMP_Text textoItem;
 
     // Update is called once per frame
 
     void Start(){
         moedas = Info_Player.coins;
         textoMoedas.SetText(moedas.ToString());
+        textoItem.SetText("Item não comprado");
     }
     
     void Update()
     {
+        if(Info_Player.item_snowboard){
+            textoItem.SetText("Item comprado");
+        }
 
     }
 
@@ -25,4 +30,6 @@ public class Moeda : MonoBehaviour
         moedas = Info_Player.coins;
         textoMoedas.SetText(moedas.ToString());
     }
+
+
 }
