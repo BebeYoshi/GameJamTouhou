@@ -8,6 +8,7 @@ public class Point_count : MonoBehaviour
 
     public int score;
     public GameObject enemySpawner;
+    public UIGameOver uiGameOver;
     public TMP_Text textoScore;
 
     void Start()
@@ -25,12 +26,17 @@ public class Point_count : MonoBehaviour
 
     public void FinaldeJogo()
     {
-        Debug.Log("Acabou");
         Destroy(enemySpawner);
         Info_Player.coins += (score / 100);
-        if(Info_Player.score_snowboard < score)
+        uiGameOver.ToggleCanvas();
+        if (Info_Player.score_snowboard < score)
         {
             Info_Player.score_snowboard = score;
+            uiGameOver.HighScore(true);
+        }
+        else
+        {
+            uiGameOver.HighScore(false);
         }
     }
 }
