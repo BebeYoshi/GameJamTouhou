@@ -35,25 +35,21 @@ public class JumpCrounch : MonoBehaviour
 
     IEnumerator Jump()
     {
-        if(idle == true)
-        {
-            idle = false;
-            jump = true;
-            yield return new WaitForSeconds(1);
-            idle = true;
-            jump = false;
-        }
+        idle = false;
+        crounch = false;
+        jump = true;
+        yield return new WaitForSeconds(1);
+        idle = true;
+        jump = false;
     }
 
     IEnumerator Crounch()
     {
-        if (idle == true)
-        {
-            idle = false;
-            crounch = true;
-            yield return new WaitForSeconds(1);
-            idle = true;
-            crounch = false;
-        }
+        idle = false;
+        crounch = true;
+        jump = false;
+        yield return new WaitForSeconds(1);
+        idle = true;
+        crounch = false;
     }
 }

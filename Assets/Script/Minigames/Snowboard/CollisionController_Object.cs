@@ -10,7 +10,7 @@ public class CollisionController_Object : MonoBehaviour
     public bool jumpable = false;
     public bool crounchable = false;
 
-    void OnCollisionEnter2D(Collision2D col)
+    void OnTriggerEnter2D(Collider2D col)
     {
        if(col.gameObject.name == "Player")
         {
@@ -23,11 +23,15 @@ public class CollisionController_Object : MonoBehaviour
                 return;
             }
             col.gameObject.GetComponent<PlayerLife>().LoseLife();
+            if(gameObject.transform.parent != null)
+            {
+                Destroy(transform.parent.gameObject);
+            }
+            Destroy(gameObject);
         }
         if (col.gameObject.name == "Score_marker")
         {
-            col.gameObject.GetComponent<Point_count>().score += 200;
-            col.gameObject.GetComponent<Point_count>().textoScore = col.gameObject.GetComponent<Point_count>().score.ToString();
+            col.gameObject.GetComponent<Point_count>().CountPoint();
             Destroy(gameObject);
         }
     }

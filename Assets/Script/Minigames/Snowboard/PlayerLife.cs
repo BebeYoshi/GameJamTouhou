@@ -14,7 +14,7 @@ public class PlayerLife : MonoBehaviour
 
     void Start()
     {
-        life = 1;
+        life = 3;
         textoLife = life.ToString();
         movement.x = -7;
         movement.y = 3;
