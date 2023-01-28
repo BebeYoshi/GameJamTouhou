@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerLife : MonoBehaviour
 {
 
-    public string textoLife;
+    public TMP_Text textoLife;
     public int life;
 
     public Rigidbody2D rb;
@@ -15,7 +16,7 @@ public class PlayerLife : MonoBehaviour
     void Start()
     {
         life = 3;
-        textoLife = life.ToString();
+        textoLife.SetText("Life: " + life.ToString());
         movement.x = -7;
         movement.y = 3;
     }
@@ -23,7 +24,7 @@ public class PlayerLife : MonoBehaviour
     public void LoseLife()
     {
         life--;
-        textoLife = life.ToString();
+        textoLife.SetText("Life: " + life.ToString());
         if (life == 0)
         {
             rb.position = movement;
