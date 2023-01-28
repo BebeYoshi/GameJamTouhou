@@ -32,7 +32,7 @@ public class Npc_UI : MonoBehaviour
     public void CheckScore(){
         switch(tipo){
             case "Snowboard":
-                if(Info_Player.score_snowboard > 2000 && Info_Player.item_snowboard == false){
+                if(Info_Player.score_snowboard >= 2000 && Info_Player.item_snowboard == false){
                     Debug.Log(Info_Player.score_snowboard);
                     buyButton.interactable = true;
                 }
