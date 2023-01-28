@@ -9,6 +9,7 @@ public class PlayerActions : MonoBehaviour
     public float action;
 
     public GameObject crosshair;
+    public GameObject snowballPrefab;
 
     void Start()
     {
@@ -42,9 +43,9 @@ public class PlayerActions : MonoBehaviour
 
     void Shoot()
     {
-        if(hidden = false)
+        if(hidden == false)
         {
-
+            Instantiate(snowballPrefab, new Vector2(crosshair.transform.position.x, crosshair.transform.position.y), Quaternion.identity);
         }
     }
 }

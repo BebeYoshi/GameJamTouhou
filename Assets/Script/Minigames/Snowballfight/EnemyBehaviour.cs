@@ -28,11 +28,17 @@ public class EnemyBehaviour : MonoBehaviour
     //How long it takes for difficulty to raise
     public float difficultyInterval;
 
-    //Current difficulty
+    //How hard the game is right now
+    public int internalDifficulty;
+    //Current position difficulty
     public int difficulty;
 
     //If the enemy is hidden from attacks
     public bool hidden;
+
+    //Get the player to deal damage;
+    public GameObject player;
+    public GameObject enemy_spawner;
 
     void Start()
     {
@@ -52,18 +58,16 @@ public class EnemyBehaviour : MonoBehaviour
         //positionList.Add(possibleSpot_variant13);
         actionInterval = 1f;
         shootDowntime = 1f;
-        difficultyInterval = 15f;
-        difficulty = 1;
+        internalDifficulty = enemy_spawner.GetComponent<SpawnEnemy>().deaths;
         hidden = false;
 
+        ChangeDifficulty();
+        DecrementIntervals();
         StartCoroutine(DoAction());
-        StartCoroutine(ChangeDifficulty());
-        StartCoroutine(DecrementIntervals());
     }
 
     IEnumerator DoAction()
     {
-        yield return new WaitForSeconds(actionInterval);
         int randomIndex;
         int randomAction = UnityEngine.Random.Range(0, 10);
         if (difficulty == 1)
@@ -73,50 +77,60 @@ public class EnemyBehaviour : MonoBehaviour
             {
                 if(randomAction == 10)
                 {
-
-                    StartCoroutine(DoAction());
+                    yield return new WaitForSeconds(shootDowntime);
+                    StartCoroutine(Shoot());
                     yield break;
                 }
                 StartCoroutine(Hide());
                 yield break;
             }
             transform.position = positionList[randomIndex];
+            yield return new WaitForSeconds(actionInterval);
         }
         //If normal pattern is choosen
         if (difficulty == 2)
         {
             randomIndex = UnityEngine.Random.Range(0, 2);
             transform.position = positionList[randomIndex];
+            yield return new WaitForSeconds(actionInterval);
         }
         //If hard pattern is choosen
         if (difficulty == 3)
         {
             randomIndex = UnityEngine.Random.Range(0, 2);
             transform.position = positionList[randomIndex];
+            yield return new WaitForSeconds(actionInterval);
         }
         StartCoroutine(DoAction());
     }
 
-    IEnumerator ChangeDifficulty()
+    IEnumerator Shoot()
     {
-        if (difficulty != 3)
+        yield return new WaitForSeconds(shootDowntime);
+    }
+
+    void ChangeDifficulty()
+    {
+        difficulty = 1;
+        if (internalDifficulty >= 3)
         {
-            yield return new WaitForSeconds(difficultyInterval);
-            difficulty++;
-            difficultyInterval *= 2;
-            StartCoroutine(ChangeDifficulty());
+            difficulty = 2;
+        }
+        if (internalDifficulty >= 10)
+        {
+            difficulty = 3;
         }
     }
 
-    IEnumerator DecrementIntervals()
+    void DecrementIntervals()
     {
-        yield return new WaitForSeconds(actionInterval * 5);
-        actionInterval /= 1.2f;
-        shootDowntime /= 1.05f;
-        if (actionInterval > 0.4f)
+        if (internalDifficulty >= 19)
         {
-            StartCoroutine(DecrementIntervals());
+            actionInterval = 0.4f;
+            shootDowntime = 0.7f;
         }
+        actionInterval /= Mathf.Pow(1.05f, internalDifficulty);
+        shootDowntime /= Mathf.Pow(1.02f, internalDifficulty);
     }
 
     IEnumerator Hide()

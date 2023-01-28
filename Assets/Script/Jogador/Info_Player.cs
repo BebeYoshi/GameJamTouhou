@@ -6,6 +6,7 @@ public static class Info_Player
 {
     private static int p_coins = 0;
     private static int p_score_snowboard = 0;
+    private static int p_score_snowballfight = 0;
     private static bool p_item_snowboard = false;
     private static bool p_item_snowfight = false;
     private static bool p_item_snowman = false;
@@ -23,7 +24,13 @@ public static class Info_Player
         set { p_score_snowboard = value; }
     }
 
-       public static bool item_snowman
+    public static int score_snowballfight
+    {
+        get { return p_score_snowballfight; }
+        set { p_score_snowballfight = value; }
+    }
+
+    public static bool item_snowman
     {
         get { return p_item_snowman; }
         set { p_item_snowman = value; }
