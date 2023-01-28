@@ -25,6 +25,7 @@ public class CollisionController_Object : MonoBehaviour
             col.gameObject.GetComponent<PlayerLife>().LoseLife();
             if(gameObject.transform.parent != null)
             {
+                //Teu pai esta extramemente incoveniente
                 Destroy(transform.parent.gameObject);
             }
             Destroy(gameObject);
