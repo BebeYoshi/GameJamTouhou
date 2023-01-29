@@ -9343,6 +9343,8 @@ MonoBehaviour:
   moveSpeed: 3.8
   isAllowed: 1
   rb: {fileID: 1937471530}
+  playerFrente: {fileID: 21300000, guid: 7dee6f927559da34980f099bcfd6b681, type: 3}
+  playerCostas: {fileID: 21300000, guid: c57ed68ec0e3f8142b66bd2788414b4b, type: 3}
 --- !u!114 &1937471534
 MonoBehaviour:
   m_ObjectHideFlags: 0
