@@ -8,21 +8,31 @@ public class Moeda : MonoBehaviour
    public TMP_Text textoMoedas;
    public int moedas;
     public TMP_Text textoItem;
+    public GameObject estrelinha;
 
     // Update is called once per frame
 
     void Start(){
+        Info_Player.coins = 50000;
+        Info_Player.score_jorge = 50000;
+        Info_Player.score_snowballfight = 50000;
         moedas = Info_Player.coins;
         textoMoedas.SetText(moedas.ToString());
-        textoItem.SetText("Item não comprado");
+        textoItem.SetText("Buy the necessary items to end the winter!");
     }
     
-    void Update()
-    {
-        if(Info_Player.item_snowboard){
-            textoItem.SetText("Item comprado");
-        }
+    public void attMoedas(){
+        moedas = Info_Player.coins;
+        textoMoedas.SetText(moedas.ToString());
+    }
 
+    public void checarItens(){
+        if(Info_Player.totalizador == 4){
+            textoItem.SetText("Offer the items at the tree!");
+            estrelinha.SetActive(true);
+            Info_Player.finalizado = true;
+        }
+        
     }
 
     public void addMoeda (){
