@@ -15,6 +15,15 @@ public class ChangeScene : MonoBehaviour
     }
 
     public void loadSceneC(){
+        Debug.Log("Cena C");
         SceneManager.LoadScene("Snowballfight");
+    }
+
+    public void loadSceneD(){
+        SceneManager.LoadScene("Jorge");
+    }
+
+    public void loadSceneE(){
+        SceneManager.LoadScene("Ending");
     }
 }

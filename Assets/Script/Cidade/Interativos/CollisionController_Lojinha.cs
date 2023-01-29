@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class CollisionController_Lojinha : MonoBehaviour
 {
-    public Npc_UI npc;
     
     void Start(){
     }
@@ -14,9 +13,8 @@ public class CollisionController_Lojinha : MonoBehaviour
 void OnCollisionStay2D(Collision2D col)
     {
         // Animação de exclamação
-       if(col.gameObject.name == "Player" && Input.GetKey(KeyCode.E) && !npc.npcPanel.activeSelf){
-        Debug.Log("abriu");
-            npc.ToggleCanvas();
+       if(col.gameObject.name == "Player" && Input.GetKey(KeyCode.E) && Info_Player.finalizado == true){
+            SceneManager.LoadScene("Ending");
        }
     }
   
