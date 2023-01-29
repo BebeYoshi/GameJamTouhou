@@ -86,7 +86,7 @@ public class EnemyBehaviour : MonoBehaviour
             {
                 Instantiate(snowballEnemy, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = attackEnemy;
-                yield return new WaitForSeconds(shootDowntime);
+                yield return new WaitForSeconds(0.7f);
                 StartCoroutine(Shoot());
                 yield break;
             }
@@ -128,7 +128,7 @@ public class EnemyBehaviour : MonoBehaviour
             {
                 Instantiate(snowballEnemy, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = attackEnemy;
-                yield return new WaitForSeconds(shootDowntime);
+                yield return new WaitForSeconds(0.7f);
                 StartCoroutine(Shoot());
                 yield break;
             }
@@ -147,6 +147,7 @@ public class EnemyBehaviour : MonoBehaviour
     //Shoot the player
     IEnumerator Shoot()
     {
+        this.gameObject.GetComponent<SoundEffectPlayer>().Play2();
         player.GetComponent<PlayerHealth>().TakeDamage();
         yield return new WaitForSeconds(shootDowntime);
         this.gameObject.GetComponent<SpriteRenderer>().sprite = dodgeEnemy;
