@@ -37,12 +37,14 @@ public class GameController : MonoBehaviour
             }
             else if (PropController.success)
             {
+                this.gameObject.GetComponent<SoundEffectPlayer>().Play1();
                 ScoreJorge.Score(100 + ((int)difficulty/2) * 200);
                 if (difficulty < maxDifficulty) difficulty++;
                 calculatingNewRound = true;
             }
             else if (LinearTimer.ended)
             {
+                this.gameObject.GetComponent<SoundEffectPlayer>().Play3();
                 GameOver = true;
                 ScoreJorge.FinaldeJogo();
             }
