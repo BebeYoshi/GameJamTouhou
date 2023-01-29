@@ -42,14 +42,14 @@ public class Npc_UI : MonoBehaviour
                     buyButton.interactable = true;
                 }
                 else if(Info_Player.score_snowboard < 2000){
-                    textoLoja.SetText("You should be better at snowboard before buying this!");
+                    textoLoja.SetText("You should be better at snowboard before buying this! (At least 2000 score)");
 
                 }
                 else if(Info_Player.item_snowboard == true){
                     textoLoja.SetText("You already got this!");
                 }
                 else {
-                    textoLoja.SetText("You can't buy this get more coins!");
+                    textoLoja.SetText("You can't buy this! Go get more coins!");
                 }
             break;
             case 1:
@@ -58,28 +58,28 @@ public class Npc_UI : MonoBehaviour
                     buyButton.interactable = true;
                 }
                 else if(Info_Player.score_snowballfight  < 2000){
-                    textoLoja.SetText("You should be better at snowboard before buying this!");
+                    textoLoja.SetText("You should be better at knocking down Cirno before buying this! (At least 2000 score)");
 
                 }
                 else if(Info_Player.item_snowfight == true){
                     textoLoja.SetText("You already got this!");
                 }
                 else {
-                    textoLoja.SetText("You can't buy this get more coins!");
+                    textoLoja.SetText("You can't buy this! Go get more coins!");
                 }
 
 
             break;
             case 2:
             if( Info_Player.item_cooking == false && Info_Player.coins >= 300){
-                    textoLoja.SetText("In stock!");
+                    textoLoja.SetText("Flying off the shelves!");
                     buyButton.interactable = true;
                 }
                 else if(Info_Player.item_cooking == true){
-                    textoLoja.SetText("You already got this!");
+                    textoLoja.SetText("I can't sell twice!");
                 }
                 else {
-                    textoLoja.SetText("You can't buy this get more coins!");
+                    textoLoja.SetText("Too poor! Go get more coins!");
                 }
 
 
@@ -90,14 +90,14 @@ public class Npc_UI : MonoBehaviour
                     buyButton.interactable = true;
                 }
                 else if(Info_Player.score_jorge  < 2000){
-                    textoLoja.SetText("You should be better at dressing a snowman before buying this!");
+                    textoLoja.SetText("Jorge needs to be dressed up better before you buy this! (At least 2000 score)");
 
                 }
                 else if(Info_Player.item_snowman == true){
                     textoLoja.SetText("You already got this!");
                 }
                 else {
-                    textoLoja.SetText("You can't buy this get more coins!");
+                    textoLoja.SetText("You can't buy this! Go get more coins!");
                 }
             break;
         }
