@@ -68,7 +68,7 @@ public class Npc_UI : MonoBehaviour
                     textoLoja.SetText("I'm sold out. But sure, go ahead and give me more money.");
                     buyButton.interactable = true;
                 }
-                else if(Info_Player.item_snowfight == true && Info_Player.coins > 70){
+                else if(Info_Player.item_snowfight == true && Info_Player.coins < 70){
                     textoLoja.SetText("Even though I can only read a youkai, your aura tells me you are broke.");
                 }
                 else {
