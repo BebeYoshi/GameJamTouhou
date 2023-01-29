@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 45181797518633039}
   - component: {fileID: 45181797518633038}
-  - component: {fileID: 45181797518633072}
+  - component: {fileID: 2949113652124768722}
   - component: {fileID: 6924002770425943730}
   m_Layer: 0
   m_Name: Snowball 1
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 45181797518633037}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.52, y: -2.25, z: 0}
-  m_LocalScale: {x: 0.4567, y: 0.4567, z: 0.4567}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -74,9 +74,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_SortingOrder: 25
+  m_Sprite: {fileID: 21300000, guid: 13b0b37ad84d650409259c18b1a63075, type: 3}
+  m_Color: {r: 0.43873262, g: 0.7073977, b: 0.9811321, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &45181797518633072
+--- !u!58 &2949113652124768722
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -101,7 +101,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.275
 --- !u!114 &6924002770425943730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,7 +114,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43b6a117d2c830947b10c45259960470, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isColliderEnabled: 0
   startPosition: {x: 0, y: 0}
   targetPosition: {x: 0, y: 0, z: 0}
   time: 0
