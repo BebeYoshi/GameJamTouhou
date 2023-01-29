@@ -43,12 +43,15 @@ public class EnemyHealth : MonoBehaviour
             gameObject.GetComponent<EnemyBehaviour>().ChangeDifficulty();
             gameObject.GetComponent<EnemyBehaviour>().DecrementIntervals();
             health = 3;
+            textHealth.SetText("Health: " + health.ToString());
         }
     }
 
     IEnumerator Immune()
     {
+        this.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
         yield return new WaitForSeconds(immuneTime);
         immune = false;
+        this.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
     }
 }

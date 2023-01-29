@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 9b2e27bef07994f4cbb7bb40db2a5e3a
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Banana
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 0ac8afb3dda1ee441943c5eddb5ca5c4, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

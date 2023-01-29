@@ -44,7 +44,9 @@ public class PlayerHealth : MonoBehaviour
 
     IEnumerator Immune()
     {
+        this.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
         yield return new WaitForSeconds(immuneTime);
         immune = false;
+        this.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
     }
 }

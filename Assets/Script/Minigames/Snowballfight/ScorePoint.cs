@@ -7,7 +7,7 @@ public class ScorePoint : MonoBehaviour
 {
 
     public int score;
-    public UIGameOver uiGameOver;
+    public UIGameOverBall uiGameOver;
     public TMP_Text textoScore;
 
 

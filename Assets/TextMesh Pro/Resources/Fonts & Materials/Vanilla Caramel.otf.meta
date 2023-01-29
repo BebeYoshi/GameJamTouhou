@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 27d4f302a8409a9418fa1ba7c2f88aed
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Vanilla Caramel
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 645f3e14c9ed1e84a80f8aa0d69ed05c, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
