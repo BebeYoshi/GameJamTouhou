@@ -19,8 +19,14 @@ public class Chawan : MonoBehaviour
 
     private void OnMouseDown()
     {
+       ingrediente.GetComponent<CookingObject>().offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
        ingrediente.GetComponent<CookingObject>().dragging = true;
        ingrediente.SetActive(true);
-       Debug.Log("Chawan");
+    }
+
+    private void OnMouseUp()
+    {
+        ingrediente.GetComponent<CookingObject>().dragging = false;
+        ingrediente.SetActive(false);
     }
 }

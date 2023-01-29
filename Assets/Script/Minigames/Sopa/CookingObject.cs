@@ -7,7 +7,7 @@ public class CookingObject : MonoBehaviour
     public GameObject Sopa;
     public bool weared;
     public bool dragging = false;
-    private Vector3 offset;
+    public Vector3 offset;
     public Vector3 initialPosition;
     public Vector3 startMouse;
 
@@ -26,27 +26,14 @@ public class CookingObject : MonoBehaviour
         if (!dragging && col.IsTouching(colSopa))
         {
             weared = true;
-            //gameObject.SetActive(false);
         }
         if (dragging)
         {
-            transform.position = (Input.mousePosition) + initialPosition - startMouse;
-        } else
+            transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + offset;
+        }
+        else
         {
             transform.position = initialPosition;
         }
-    }
-
-    public void OnMouseDown()
-    {
-        startMouse = Input.mousePosition;
-        //transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        dragging = true;
-        Debug.Log("Ingrediente");
-    }
-
-    private void OnMouseUp()
-    {
-        dragging = false;
     }
 }
