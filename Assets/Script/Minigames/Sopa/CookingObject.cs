@@ -9,6 +9,7 @@ public class CookingObject : MonoBehaviour
     public bool dragging = false;
     private Vector3 offset;
     public Vector3 initialPosition;
+    public Vector3 startMouse;
 
     // Start is called before the first frame update
     void Start()
@@ -25,21 +26,23 @@ public class CookingObject : MonoBehaviour
         if (!dragging && col.IsTouching(colSopa))
         {
             weared = true;
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
         }
         if (dragging)
         {
-            transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + offset;
+            transform.position = (Input.mousePosition) + initialPosition - startMouse;
         } else
         {
             transform.position = initialPosition;
         }
     }
 
-    private void OnMouseDown()
+    public void OnMouseDown()
     {
-        offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        startMouse = Input.mousePosition;
+        //transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
         dragging = true;
+        Debug.Log("Ingrediente");
     }
 
     private void OnMouseUp()

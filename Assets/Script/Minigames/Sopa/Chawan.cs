@@ -21,5 +21,6 @@ public class Chawan : MonoBehaviour
     {
        ingrediente.GetComponent<CookingObject>().dragging = true;
        ingrediente.SetActive(true);
+       Debug.Log("Chawan");
     }
 }
