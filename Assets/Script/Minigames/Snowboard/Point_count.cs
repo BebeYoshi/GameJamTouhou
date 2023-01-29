@@ -16,7 +16,7 @@ public class Point_count : MonoBehaviour
     {
         score = 0;
         textoScore.SetText("Score: " + score.ToString());
-        if (Info_Player.tries_snowballfight == 0 || Info_Player.score_snowballfight < 1000)
+        if (Info_Player.tries_snowboard == 0 || Info_Player.score_snowboard < 1000)
         {
             StartCoroutine(GiveTip());
         }
