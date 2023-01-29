@@ -1843,7 +1843,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 959.99994, y: 497.9626}
+  m_AnchoredPosition: {x: 959.9999, y: 497.9626}
   m_SizeDelta: {x: 1920, y: 995.9252}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &426293664
@@ -2258,6 +2258,7 @@ GameObject:
   - component: {fileID: 539217194}
   - component: {fileID: 539217192}
   - component: {fileID: 539217196}
+  - component: {fileID: 539217197}
   m_Layer: 0
   m_Name: Snowman_Shop
   m_TagString: Untagged
@@ -2362,6 +2363,22 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 1.0000001}
   m_Direction: 0
+--- !u!114 &539217197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539217191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a624eaca71c4a4e4a88c71136c8da6b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  src: {fileID: 1552355366}
+  sfx1: {fileID: 8300000, guid: 34d60deb664f5ec4eae1d9a79583b5e6, type: 3}
+  sfx2: {fileID: 0}
+  sfx3: {fileID: 0}
 --- !u!1 &548552974
 GameObject:
   m_ObjectHideFlags: 0
@@ -4799,6 +4816,7 @@ GameObject:
   - component: {fileID: 1108626035}
   - component: {fileID: 1108626033}
   - component: {fileID: 1108626037}
+  - component: {fileID: 1108626038}
   m_Layer: 0
   m_Name: SnowBoard_Shop
   m_TagString: Untagged
@@ -4903,6 +4921,22 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1.0000002, y: 1}
   m_Direction: 0
+--- !u!114 &1108626038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108626032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a624eaca71c4a4e4a88c71136c8da6b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  src: {fileID: 1552355366}
+  sfx1: {fileID: 8300000, guid: 34d60deb664f5ec4eae1d9a79583b5e6, type: 3}
+  sfx2: {fileID: 0}
+  sfx3: {fileID: 0}
 --- !u!1 &1120949015
 GameObject:
   m_ObjectHideFlags: 0
@@ -6430,6 +6464,134 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1531307197}
   m_CullTransparentMesh: 1
+--- !u!1 &1552355365
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1552355367}
+  - component: {fileID: 1552355366}
+  m_Layer: 0
+  m_Name: src
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1552355366
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552355365}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1552355367
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552355365}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.759448, y: 0.53648967, z: 82.38816}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1591053791
 GameObject:
   m_ObjectHideFlags: 0
@@ -7986,6 +8148,7 @@ GameObject:
   - component: {fileID: 1833955392}
   - component: {fileID: 1833955390}
   - component: {fileID: 1833955394}
+  - component: {fileID: 1833955395}
   m_Layer: 0
   m_Name: Snowfight_Shop
   m_TagString: Untagged
@@ -8090,6 +8253,22 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 1}
   m_Direction: 0
+--- !u!114 &1833955395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833955389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a624eaca71c4a4e4a88c71136c8da6b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  src: {fileID: 1552355366}
+  sfx1: {fileID: 8300000, guid: 34d60deb664f5ec4eae1d9a79583b5e6, type: 3}
+  sfx2: {fileID: 0}
+  sfx3: {fileID: 0}
 --- !u!1 &1874301971
 GameObject:
   m_ObjectHideFlags: 0
@@ -9315,6 +9494,7 @@ GameObject:
   - component: {fileID: 2116468358}
   - component: {fileID: 2116468356}
   - component: {fileID: 2116468360}
+  - component: {fileID: 2116468361}
   m_Layer: 0
   m_Name: Cooking_Shop
   m_TagString: Untagged
@@ -9419,6 +9599,22 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1.0000001, y: 1.0000001}
   m_Direction: 0
+--- !u!114 &2116468361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116468355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a624eaca71c4a4e4a88c71136c8da6b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  src: {fileID: 1552355366}
+  sfx1: {fileID: 8300000, guid: 34d60deb664f5ec4eae1d9a79583b5e6, type: 3}
+  sfx2: {fileID: 0}
+  sfx3: {fileID: 0}
 --- !u!1 &2129359999
 GameObject:
   m_ObjectHideFlags: 0
