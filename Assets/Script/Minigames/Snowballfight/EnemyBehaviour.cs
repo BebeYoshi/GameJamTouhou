@@ -37,6 +37,10 @@ public class EnemyBehaviour : MonoBehaviour
     //So Enemy can't attack right after hiding or starting the game
     public bool noAttack;
 
+    public Sprite attackEnemy;
+    public Sprite dodgeEnemy;
+    public Sprite hiddenEnemy;
+
     //Get the player to deal damage;
     public GameObject player;
     public GameObject snowballEnemy;
@@ -81,6 +85,7 @@ public class EnemyBehaviour : MonoBehaviour
             if (randomAction == 9 && !noAttack)
             {
                 Instantiate(snowballEnemy, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+                this.gameObject.GetComponent<SpriteRenderer>().sprite = attackEnemy;
                 yield return new WaitForSeconds(shootDowntime);
                 StartCoroutine(Shoot());
                 yield break;
@@ -101,6 +106,7 @@ public class EnemyBehaviour : MonoBehaviour
             if (randomAction >= 8 && !noAttack)
             {
                 Instantiate(snowballEnemy, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+                this.gameObject.GetComponent<SpriteRenderer>().sprite = attackEnemy;
                 yield return new WaitForSeconds(0.7f);
                 StartCoroutine(Shoot());
                 yield break;
@@ -121,6 +127,7 @@ public class EnemyBehaviour : MonoBehaviour
             if (randomAction >= 7 && !noAttack)
             {
                 Instantiate(snowballEnemy, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+                this.gameObject.GetComponent<SpriteRenderer>().sprite = attackEnemy;
                 yield return new WaitForSeconds(shootDowntime);
                 StartCoroutine(Shoot());
                 yield break;
@@ -142,6 +149,7 @@ public class EnemyBehaviour : MonoBehaviour
     {
         player.GetComponent<PlayerHealth>().TakeDamage();
         yield return new WaitForSeconds(shootDowntime);
+        this.gameObject.GetComponent<SpriteRenderer>().sprite = dodgeEnemy;
         StartCoroutine(DoAction());
     }
 
@@ -175,11 +183,13 @@ public class EnemyBehaviour : MonoBehaviour
     //Enemy hides from attacks
     IEnumerator Hide()
     {
+        this.gameObject.GetComponent<SpriteRenderer>().sprite = hiddenEnemy;
         hidden = true;
         transform.position = new Vector2(-1.5f, -2.5f);
         yield return new WaitForSeconds(2f);
         hidden = false;
         noAttack = true;
+        this.gameObject.GetComponent<SpriteRenderer>().sprite = dodgeEnemy;
         StartCoroutine(DoAction());
     }
 }
