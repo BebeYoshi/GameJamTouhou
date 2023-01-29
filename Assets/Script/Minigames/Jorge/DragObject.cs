@@ -4,22 +4,25 @@ using UnityEngine;
 
 public class DragObject : MonoBehaviour
 {
-    private bool dragging = false;
+    public bool dragging = false;
     private Vector3 offset;
     private Vector3 initialPosition;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         initialPosition = transform.position;
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         if (dragging)
         {
             transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + offset;
+        } else
+        {
+            transform.position = initialPosition;
         }
     }
 
@@ -32,6 +35,5 @@ public class DragObject : MonoBehaviour
     private void OnMouseUp()
     {
         dragging = false;
-        transform.position = initialPosition;
     }
 }

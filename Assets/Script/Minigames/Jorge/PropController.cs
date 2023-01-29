@@ -102,13 +102,30 @@ public class PropController : MonoBehaviour
         {
             instances.Add(Instantiate(prefabs[i], new Vector3(15, 15, 0), prefabs[i].transform.rotation));
         }
-        NewRandom();
+        NewRound();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        int totalWeared = 0;
+        for (int i = 0; i < instances.Count(); i ++)
+        {
+            if (instances[i].GetComponent<WearableObject>().weared) {
+                if (i/3 == kit)
+                {
+                    instances[i].GetComponent<WearableObject>().wearObject.SetActive(true);
+                    totalWeared++;
+                } else
+                {
+                    instances[i].SetActive(true);
+                }
+            }
+        }
+        if (totalWeared == 3)
+        {
+            success = true;
+        }
     }
 
     void HidePreviews()
@@ -125,12 +142,12 @@ public class PropController : MonoBehaviour
         previews[kit].SetActive(true);
     }
 
-    void NewRandom()
+    void NewRound()
     {
+        success = false;
         HidePreviews();
         PositionProps();
         ChooseKit();
-        success = false;
     }
 
     void PositionProps()
