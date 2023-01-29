@@ -41,6 +41,7 @@ public class EnemyHealth : MonoBehaviour
         {
             point_maker.GetComponent<ScorePoint>().Score();
             deaths++;
+            this.gameObject.GetComponent<SoundEffectPlayer>().Play1();
             gameObject.GetComponent<EnemyBehaviour>().ChangeDifficulty();
             gameObject.GetComponent<EnemyBehaviour>().DecrementIntervals();
             health = 3;

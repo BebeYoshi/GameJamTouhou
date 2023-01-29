@@ -103,6 +103,7 @@ public class EnemySpawner : MonoBehaviour
             yield return new WaitForSeconds(difficultyInterval);
             difficulty++;
             difficultyInterval *= 2;
+            this.gameObject.GetComponent<SoundEffectPlayer>().Play1();
             StartCoroutine(ChangeDifficulty());
         }
     }
