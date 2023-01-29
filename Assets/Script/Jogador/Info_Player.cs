@@ -58,32 +58,32 @@ public static class Info_Player
 
     public static int score_sopa
     {
-        get { return p_score_snowboard; }
-        set { p_score_snowboard = value; }
+        get { return p_score_sopa; }
+        set { p_score_sopa = value; }
     }
 
     public static int tries_snowboard
     {
-        get { return p_score_snowboard; }
-        set { p_score_snowboard = value; }
+        get { return p_tries_snowboard; }
+        set { p_tries_snowboard = value; }
     }
 
     public static int tries_jorge
     {
-        get { return p_score_jorge; }
-        set { p_score_jorge = value; }
+        get { return p_tries_jorge; }
+        set { p_tries_jorge = value; }
     }
 
     public static int tries_snowballfight
     {
-        get { return p_score_snowballfight; }
-        set { p_score_snowballfight = value; }
+        get { return p_tries_snowballfight; }
+        set { p_tries_snowballfight = value; }
     }
 
     public static int tries_sopa
     {
-        get { return p_score_snowboard; }
-        set { p_score_snowboard = value; }
+        get { return p_tries_sopa; }
+        set { p_tries_sopa = value; }
     }
 
     public static bool item_snowman

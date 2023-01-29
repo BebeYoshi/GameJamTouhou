@@ -8,6 +8,7 @@ public class Point_count : MonoBehaviour
 
     public int score;
     public GameObject enemySpawner;
+    public GameObject tip;
     public UIGameOver uiGameOver;
     public TMP_Text textoScore;
 
@@ -15,6 +16,10 @@ public class Point_count : MonoBehaviour
     {
         score = 0;
         textoScore.SetText("Score: " + score.ToString());
+        if (Info_Player.tries_snowballfight == 0 || Info_Player.score_snowballfight < 1000)
+        {
+            StartCoroutine(GiveTip());
+        }
     }
 
     public void CountPoint()
@@ -28,6 +33,7 @@ public class Point_count : MonoBehaviour
     {
         Destroy(enemySpawner);
         Info_Player.coins += (score / 100);
+        Info_Player.tries_snowboard++;
         uiGameOver.ToggleCanvas();
         if (Info_Player.score_snowboard < score)
         {
@@ -39,4 +45,12 @@ public class Point_count : MonoBehaviour
             uiGameOver.HighScore(false);
         }
     }
+
+    IEnumerator GiveTip()
+    {
+        tip.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        tip.SetActive(false);
+    }
+
 }
