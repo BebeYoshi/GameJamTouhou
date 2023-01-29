@@ -7,6 +7,9 @@ public class PlayerMovement : MonoBehaviour
 
     public float moveSpeed = 5f;
 
+    public Sprite idlePlayer;
+    public Sprite movingPlayer;
+
     public Rigidbody2D rb;
 
     Vector2 movement;
@@ -14,6 +17,16 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetButton("Horizontal") && this.gameObject.GetComponent<SpriteRenderer>().sprite == idlePlayer)
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = movingPlayer;
+            this.gameObject.GetComponent<Animator>().enabled = false;
+        }
+        if (Input.GetButtonUp("Horizontal") && this.gameObject.GetComponent<SpriteRenderer>().sprite == movingPlayer)
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = idlePlayer;
+            this.gameObject.GetComponent<Animator>().enabled = true;
+        }
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Horizontal");
     }

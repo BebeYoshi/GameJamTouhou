@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Snowboard.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Mainmenu.unity
+    guid: 7816a314941580947a1dc8501e91e4d4
   - enabled: 1
     path: Assets/Scenes/Cidade.unity
     guid: 9211ec9fa56b3cb42948a8bf516e12cb
@@ -15,14 +15,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Loja.unity
     guid: 719394a0dd913b2419c16b0864846210
   - enabled: 1
+    path: Assets/Scenes/Snowboard.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
     path: Assets/Scenes/Snowballfight.unity
     guid: 37961d3ccee24554abdb5e7b3506f658
   - enabled: 1
     path: Assets/Scenes/Jorge.unity
     guid: dcb983a2df8f1954d957cded724a9dd4
-  - enabled: 1
-    path: Assets/Scenes/Mainmenu.unity
-    guid: 7816a314941580947a1dc8501e91e4d4
   - enabled: 1
     path: Assets/Scenes/Ending.unity
     guid: 2034ca239f3131b469d944bf766b1266
