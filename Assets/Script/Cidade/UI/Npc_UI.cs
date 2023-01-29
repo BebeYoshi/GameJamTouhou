@@ -134,6 +134,7 @@ public class Npc_UI : MonoBehaviour
                 Info_Player.totalizador++;
             break;
         }
+        moeda.attMoedas();
     }
     
 
