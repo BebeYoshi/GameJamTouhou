@@ -64,9 +64,12 @@ public class Npc_UI : MonoBehaviour
                     textoLoja.SetText("Go and steal all Cirno's points! (At least 2000 score)");
 
                 }
-                else if(Info_Player.item_snowfight == true){
+                else if(Info_Player.item_snowfight == true && Info_Player.coins >= 70){
                     textoLoja.SetText("I'm sold out. But sure, go ahead and give me more money.");
                     buyButton.interactable = true;
+                }
+                else if(Info_Player.item_snowfight == true && Info_Player.coins < 70){
+                    textoLoja.SetText("Even though I can only read a youkai, your aura tells me you are broke.");
                 }
                 else {
                     textoLoja.SetText("Huh? The standard price is 40? These people don't know how to make money");
@@ -90,18 +93,18 @@ public class Npc_UI : MonoBehaviour
             break;
             case 3:
             if(Info_Player.score_jorge >= 2000 && Info_Player.item_snowman == false && Info_Player.coins >= 40){
-                    textoLoja.SetText("In stock!");
+                    textoLoja.SetText("So you see.. This item is a really special antique, it was used.. (Better to ignore the lengthy explanation)");
                     buyButton.interactable = true;
                 }
                 else if(Info_Player.score_jorge  < 2000){
-                    textoLoja.SetText("Jorge needs to be dressed up better before you buy this! (At least 2000 score)");
+                    textoLoja.SetText("Jorge should be in need of a new look. (At least 2000 score in snowman dress up)");
 
                 }
                 else if(Info_Player.item_snowman == true){
-                    textoLoja.SetText("You already got this!");
+                    textoLoja.SetText("These kind of items are rare, Marisa. I can't sell you more than one. ");
                 }
                 else {
-                    textoLoja.SetText("You can't buy this! Go get more coins!");
+                    textoLoja.SetText("You know Marisa, this is a highly valued item.");
                 }
             break;
         }
