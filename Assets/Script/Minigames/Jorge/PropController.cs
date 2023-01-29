@@ -1,11 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PropController : MonoBehaviour
 {
     public List<Vector3> spawners;
+    public List<GameObject> prefabs;
+    public List<GameObject> instances;
+    public List<GameObject> previews;
+
+    public GameObject jorgem2;
+    public GameObject jorgem3;
     public GameObject jorgem4;
+
+    public GameObject jorger1;
+    public GameObject jorger2;
+    public GameObject jorger4;
+    
+    public GameObject jorgey1;
+    public GameObject jorgey2;
+    public GameObject jorgey4;
+    
+    public GameObject jorgeyk1;
+    public GameObject jorgeyk2;
+    public GameObject jorgeyk3;
+    
+    public GameObject jorgeyyk1;
+    public GameObject jorgeyyk2;
+    public GameObject jorgeyyk3;
+
+    public GameObject preview1;
+    public GameObject preview2;
+    public GameObject preview3;
+    public GameObject preview4;
+    public GameObject preview5;
+
+    public int kit;
+    public bool success;
 
     // Start is called before the first frame update
     void Start()
@@ -34,15 +66,107 @@ public class PropController : MonoBehaviour
             new Vector3(-9.3f, -3.9f, 0)
         };
 
-        foreach (var s in spawners)
+        prefabs = new List<GameObject>()
         {
-            Instantiate(jorgem4, s, Quaternion.identity);
+            jorgem2,
+            jorgem3,
+            jorgem4,
+
+            jorger1,
+            jorger2,
+            jorger4,
+
+            jorgey1,
+            jorgey2,
+            jorgey4,
+
+            jorgeyk1,
+            jorgeyk2,
+            jorgeyk3,
+
+            jorgeyyk1,
+            jorgeyyk2,
+            jorgeyyk3
+        };
+
+        previews = new List<GameObject>()
+        {
+            preview1,
+            preview2,
+            preview3,
+            preview4,
+            preview5
+        };
+
+        for (int i = 0; i < prefabs.Count(); i++)
+        {
+            instances.Add(Instantiate(prefabs[i], new Vector3(15, 15, 0), prefabs[i].transform.rotation));
         }
+        NewRandom();
     }
 
-// Update is called once per frame
+    // Update is called once per frame
     void Update()
     {
         
+    }
+
+    void HidePreviews()
+    {
+        foreach (var preview in previews)
+        {
+            preview.SetActive(false);
+        }
+    }
+
+    void ChooseKit()
+    {
+        kit = UnityEngine.Random.Range(0, prefabs.Count() / 3);
+        previews[kit].SetActive(true);
+    }
+
+    void NewRandom()
+    {
+        HidePreviews();
+        PositionProps();
+        ChooseKit();
+        success = false;
+    }
+
+    void PositionProps()
+    {
+        var randomInt = RandomPermutation(instances.Count()); // 15!
+        var indices = SelectedIndices(spawners.Count(), spawners.Count() - instances.Count()); // 20 choose 5
+
+        for (int i = 0; i < instances.Count(); i++)
+        {
+            instances[randomInt[i]].transform.position = spawners[indices[i]];
+            instances[randomInt[i]].SetActive(true);
+        }
+    }
+
+    List<int> SelectedIndices(int n, int k)
+    {
+        var list = Enumerable.Range(0, n).ToList();
+        for (int i = 0; i < k; i++)
+        {
+            int m = UnityEngine.Random.Range(0, n-i);
+            list.RemoveAt(m);
+        }
+        return list;
+    }
+
+    public List<int> RandomPermutation(int n)
+    {
+        var list = Enumerable.Range(0, n).ToList();
+        while (n > 1)
+        {
+            int i = UnityEngine.Random.Range(0, n);
+            n--;
+            int temp = list[i];
+            list[i] = list[n];
+            list[n] = temp;
+        }
+        return list;
     }
 }
