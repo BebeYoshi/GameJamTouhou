@@ -6,15 +6,23 @@ using UnityEngine.UI;
 public class LinearTimer : MonoBehaviour
 {
     Image TimerBar;
-    public float maxTime = 5f;
+    public float maxTime;
     float timeLeft;
     public GameObject TimesUp;
+    public bool ended;
 
     // Start is called before the first frame update
     void Start()
     {
         TimesUp.SetActive(false);
         TimerBar = GetComponent<Image>();
+        timeLeft = maxTime;
+    }
+
+    public void NewRound(float maxTime)
+    {
+        TimesUp.SetActive(false);
+        this.maxTime = maxTime;
         timeLeft = maxTime;
     }
 
@@ -30,6 +38,5 @@ public class LinearTimer : MonoBehaviour
             TimesUp.SetActive(true);
             Time.timeScale = 0;
         }
-
     }
 }

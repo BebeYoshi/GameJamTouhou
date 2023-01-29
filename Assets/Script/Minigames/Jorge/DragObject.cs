@@ -6,7 +6,7 @@ public class DragObject : MonoBehaviour
 {
     public bool dragging = false;
     private Vector3 offset;
-    private Vector3 initialPosition;
+    public Vector3 initialPosition;
 
     // Start is called before the first frame update
     public void Start()

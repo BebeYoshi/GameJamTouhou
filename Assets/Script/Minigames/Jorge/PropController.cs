@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,6 +43,7 @@ public class PropController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        UnityEngine.Random.InitState(DateTime.Now.Millisecond);
         spawners = new List<Vector3>()
         {
             new Vector3(-9.8f, 0.5f, 0),
@@ -128,11 +130,20 @@ public class PropController : MonoBehaviour
         }
     }
 
-    void HidePreviews()
+    void NakeJorge()
     {
         foreach (var preview in previews)
         {
             preview.SetActive(false);
+        }
+        foreach (var instance in instances)
+        {
+            instance.GetComponent<WearableObject>().weared = false;
+            var wearObject = instance.GetComponent<WearableObject>().wearObject;
+            if (wearObject != null)
+            {
+                wearObject.SetActive(false);
+            }
         }
     }
 
@@ -142,10 +153,10 @@ public class PropController : MonoBehaviour
         previews[kit].SetActive(true);
     }
 
-    void NewRound()
+    public void NewRound()
     {
         success = false;
-        HidePreviews();
+        NakeJorge();
         PositionProps();
         ChooseKit();
     }
@@ -157,6 +168,7 @@ public class PropController : MonoBehaviour
 
         for (int i = 0; i < instances.Count(); i++)
         {
+            instances[randomInt[i]].GetComponent<DragObject>().initialPosition = spawners[indices[i]];
             instances[randomInt[i]].transform.position = spawners[indices[i]];
             instances[randomInt[i]].SetActive(true);
         }
