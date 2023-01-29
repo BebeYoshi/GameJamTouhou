@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3135858855544015463}
   - component: {fileID: 3135858855544015460}
   - component: {fileID: 3135858855544015461}
-  - component: {fileID: 3135858855544015458}
+  - component: {fileID: 6112823149961536747}
   m_Layer: 0
   m_Name: jorger2_0
   m_TagString: Untagged
@@ -102,7 +102,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.295
---- !u!114 &3135858855544015458
+--- !u!114 &6112823149961536747
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,6 +111,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3135858855544015459}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1deb51a7eada81742a84f86f9cf17b4f, type: 3}
+  m_Script: {fileID: 11500000, guid: 41b15b0e4529c2a428670b8ce62145b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dragging: 0
+  wearPrefab: {fileID: 3572020720959365100, guid: 865ee396e694c7f4fa979c54f262d068, type: 3}
+  wearObject: {fileID: 0}
+  Jorge: {fileID: 0}
+  weared: 0

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7850720485124470013}
   - component: {fileID: 7850720485124470002}
   - component: {fileID: 7850720485124470003}
-  - component: {fileID: 7850720485124470000}
+  - component: {fileID: 5232947427801383938}
   m_Layer: 0
   m_Name: jorgeyk1_0
   m_TagString: Untagged
@@ -112,7 +112,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.62, y: 1.43}
   m_EdgeRadius: 0
---- !u!114 &7850720485124470000
+--- !u!114 &5232947427801383938
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,6 +121,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7850720485124470001}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1deb51a7eada81742a84f86f9cf17b4f, type: 3}
+  m_Script: {fileID: 11500000, guid: 41b15b0e4529c2a428670b8ce62145b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dragging: 0
+  wearPrefab: {fileID: 6445803162547806001, guid: 9c6993bf5be95e0438cf3cb152b29fb6, type: 3}
+  wearObject: {fileID: 0}
+  Jorge: {fileID: 0}
+  weared: 0

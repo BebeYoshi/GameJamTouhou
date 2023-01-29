@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8379320799859556662}
   - component: {fileID: 8379320799859556661}
-  - component: {fileID: 8379320799859556659}
   - component: {fileID: 8379320799859556663}
+  - component: {fileID: -4701348817021634037}
   m_Layer: 0
   m_Name: jorgey4
   m_TagString: Untagged
@@ -86,18 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8379320799859556659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8379320799859556658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1deb51a7eada81742a84f86f9cf17b4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!60 &8379320799859556663
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -244,3 +232,20 @@ PolygonCollider2D:
       - {x: 1.405, y: -4.065}
       - {x: 1.495, y: -3.905}
       - {x: 1.645, y: -3.455}
+--- !u!114 &-4701348817021634037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8379320799859556658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41b15b0e4529c2a428670b8ce62145b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragging: 0
+  wearPrefab: {fileID: 4283381882985032019, guid: 2b509e1c2b045234eb73fba2c89ac683, type: 3}
+  wearObject: {fileID: 0}
+  Jorge: {fileID: 0}
+  weared: 0
