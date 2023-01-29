@@ -6,8 +6,10 @@ public class GameController : MonoBehaviour
 {
     public GameObject LinearTimerObj;
     public GameObject PropControllerObj;
-    public LinearTimer LinearTimer;
-    public PropController PropController;
+    public GameObject ScoreJorgeObj;
+    private LinearTimer LinearTimer;
+    private PropController PropController;
+    private ScoreJorge ScoreJorge;
     public bool GameOver;
     public int difficulty;
     public int maxDifficulty;
@@ -18,6 +20,7 @@ public class GameController : MonoBehaviour
     {
         LinearTimer = LinearTimerObj.GetComponent<LinearTimer>();
         PropController = PropControllerObj.GetComponent<PropController>();
+        ScoreJorge = ScoreJorgeObj.GetComponent<ScoreJorge>();
         GameOver = false;
         difficulty = 0;
     }
@@ -30,13 +33,14 @@ public class GameController : MonoBehaviour
             if (PropController.success)
             {
                 if (difficulty < maxDifficulty) difficulty++;
-
+                ScoreJorge.Score();
                 PropController.NewRound();
                 LinearTimer.NewRound(maxTime - maxTime * difficulty / (maxDifficulty+1));
             }
             else if (LinearTimer.ended)
             {
                 GameOver = true;
+                ScoreJorge.FinaldeJogo();
             }
         }
     }

@@ -37,6 +37,7 @@ public class LinearTimer : MonoBehaviour
         {
             TimesUp.SetActive(true);
             Time.timeScale = 0;
+            ended = true;
         }
     }
 }
