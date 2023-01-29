@@ -9,7 +9,6 @@ public static class Info_Player
     private static int p_score_snowballfight = 0;
     private static int p_score_jorge = 0;
     private static int p_score_sopa = 0;
-    private static int p_score_jorge = 0;
     private static int p_tries_snowboard = 0;
     private static int p_tries_snowballfight = 0;
     private static int p_tries_jorge = 0;
