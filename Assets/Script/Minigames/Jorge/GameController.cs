@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour
     public int difficulty;
     public int maxDifficulty;
     public float maxTime;
+    private bool calculatingNewRound;
 
     // Start is called before the first frame update
     void Start()
@@ -30,12 +31,15 @@ public class GameController : MonoBehaviour
     {
         if (!GameOver)
         {
-            if (PropController.success)
+            if (calculatingNewRound)
             {
+                StartCoroutine(NewRound());
+            }
+            else if (PropController.success)
+            {
+                ScoreJorge.Score(100 + ((int)difficulty/2) * 200);
                 if (difficulty < maxDifficulty) difficulty++;
-                ScoreJorge.Score();
-                PropController.NewRound();
-                LinearTimer.NewRound(maxTime - maxTime * difficulty / (maxDifficulty+1));
+                calculatingNewRound = true;
             }
             else if (LinearTimer.ended)
             {
@@ -43,5 +47,16 @@ public class GameController : MonoBehaviour
                 ScoreJorge.FinaldeJogo();
             }
         }
+    }
+
+    IEnumerator NewRound()
+    {
+        
+        LinearTimer.Stop();
+        yield return new WaitForSeconds(1.0f / (1+difficulty));
+        LinearTimer.Unstop();
+        PropController.NewRound();
+        LinearTimer.NewRound(maxTime - maxTime * difficulty / (maxDifficulty + 1));
+        calculatingNewRound = false;
     }
 }

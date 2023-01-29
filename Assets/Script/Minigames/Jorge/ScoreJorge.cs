@@ -17,9 +17,9 @@ public class ScoreJorge : MonoBehaviour
         textoScore.SetText("Score: " + score.ToString());
     }
 
-    public void Score()
+    public void Score(int value)
     {
-        score += 400;
+        score += value;
         textoScore.SetText("Score: " + score.ToString());
     }
 

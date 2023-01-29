@@ -24,6 +24,8 @@ public class PlayerLife : MonoBehaviour
     public void LoseLife()
     {
         life--;
+        this.gameObject.GetComponent<SoundEffectPlayer>().Play2();
+        StartCoroutine(PlaySound());
         textoLife.SetText("Life: " + life.ToString());
         if (life == 0)
         {
@@ -39,5 +41,13 @@ public class PlayerLife : MonoBehaviour
             col.gameObject.GetComponent<Point_count>().FinaldeJogo();
             Destroy(gameObject);
         }
+    }
+
+    IEnumerator PlaySound()
+    {
+        this.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+        yield return new WaitForSeconds(0.4f);
+        this.gameObject.GetComponent<SoundEffectPlayer>().Play3();
+        this.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
     }
 }

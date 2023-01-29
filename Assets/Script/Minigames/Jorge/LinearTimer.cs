@@ -10,6 +10,7 @@ public class LinearTimer : MonoBehaviour
     float timeLeft;
     public GameObject TimesUp;
     public bool ended;
+    private bool stopped;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,7 @@ public class LinearTimer : MonoBehaviour
         TimesUp.SetActive(false);
         TimerBar = GetComponent<Image>();
         timeLeft = maxTime;
+        Unstop();
     }
 
     public void NewRound(float maxTime)
@@ -26,12 +28,22 @@ public class LinearTimer : MonoBehaviour
         timeLeft = maxTime;
     }
 
+    public void Stop()
+    {
+        stopped = true;
+    }
+
+    public void Unstop()
+    {
+        stopped = false;
+    }
+
     // Update is called once per frame
     void Update()
     {
         if (timeLeft > 0)
         {
-            timeLeft -= Time.deltaTime;
+            if (!stopped) timeLeft -= Time.deltaTime;
             TimerBar.fillAmount = timeLeft / maxTime;
         } else
         {

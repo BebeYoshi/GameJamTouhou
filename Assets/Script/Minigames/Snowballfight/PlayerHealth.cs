@@ -32,6 +32,7 @@ public class PlayerHealth : MonoBehaviour
         {
             health--;
             textHealth.SetText("Health: " + health.ToString());
+            this.gameObject.GetComponent<SoundEffectPlayer>().Play3();
             immune = true;
             StartCoroutine(Immune());
         }

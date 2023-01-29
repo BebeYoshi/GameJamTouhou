@@ -57,9 +57,16 @@ public class PlayerActions : MonoBehaviour
             this.gameObject.GetComponent<SpriteRenderer>().sprite = attackPlayer;
             Instantiate(snowballPrefab, new Vector2(crosshair.transform.position.x, crosshair.transform.position.y), Quaternion.identity);
             onCooldown = true;
+            StartCoroutine(SnowballSound());
             yield return new WaitForSeconds(shootCooldown);
             onCooldown = false;
             this.gameObject.GetComponent<SpriteRenderer>().sprite = idlePlayer;
         }
+    }
+
+    IEnumerator SnowballSound()
+    {
+        yield return new WaitForSeconds(0.4f);
+        this.gameObject.GetComponent<SoundEffectPlayer>().Play1();
     }
 }
