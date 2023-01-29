@@ -20,6 +20,12 @@ public class PlayerMovement_Cidade : MonoBehaviour
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+        if(movement.x <0){
+            this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
+        }
+        else if(movement.x >0){
+            this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
+        }
         
     }
     void FixedUpdate()
@@ -28,4 +34,5 @@ public class PlayerMovement_Cidade : MonoBehaviour
             rb.velocity = movement * moveSpeed;
         }
     }
+
 }
