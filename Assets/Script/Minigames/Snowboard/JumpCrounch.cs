@@ -22,12 +22,17 @@ public class JumpCrounch : MonoBehaviour
         idle = true;
         jump = false;
         crounch = false;
+        this.gameObject.GetComponent<SoundEffectPlayer>().Play3();
     }
 
     void Update()
     {
         if(Input.GetButton("Jump") && crounch == false)
         {
+            if(Input.GetButtonDown("Jump"))
+            {
+                this.gameObject.GetComponent<SoundEffectPlayer>().Play1();
+            }
             idle = false;
             jump = true;
             this.gameObject.GetComponent<Animator>().enabled = false;
@@ -39,6 +44,7 @@ public class JumpCrounch : MonoBehaviour
             jump = false;
             this.gameObject.GetComponent<SpriteRenderer>().sprite = idlePlayer;
             this.gameObject.GetComponent<Animator>().enabled = true;
+            this.gameObject.GetComponent<SoundEffectPlayer>().Play3();
         }
         if (Input.GetButton("Crounch") && jump == false)
         {
