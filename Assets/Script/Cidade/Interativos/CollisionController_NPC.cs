@@ -17,7 +17,7 @@ void OnCollisionEnter2D(Collision2D col)
         // Animação de exclamação
        if(col.gameObject.name == "Player"  && !exclamacaoIMG.activeSelf){
             exclamacaoIMG.SetActive(true);
-       }
+        }
     }
 
 
@@ -25,7 +25,7 @@ void OnCollisionStay2D(Collision2D col)
     {
         // Animação de exclamação
        if(col.gameObject.name == "Player" && Input.GetKey(KeyCode.E) && !uiNpc.npcPanel.activeSelf){
-        Debug.Log("abriu");
+            this.gameObject.GetComponent<SoundEffectPlayer>().Play1();
             uiNpc.ToggleCanvas();
        }
     }
