@@ -38,7 +38,6 @@ public class EnemyBehaviour : MonoBehaviour
 
     //Get the player to deal damage;
     public GameObject player;
-    public GameObject enemy_spawner;
 
     void Start()
     {
@@ -58,7 +57,7 @@ public class EnemyBehaviour : MonoBehaviour
         //positionList.Add(possibleSpot_variant13);
         actionInterval = 1f;
         shootDowntime = 1f;
-        internalDifficulty = enemy_spawner.GetComponent<SpawnEnemy>().deaths;
+        internalDifficulty = gameObject.GetComponent<EnemyHealth>().deaths;
         hidden = false;
 
         ChangeDifficulty();
@@ -66,16 +65,20 @@ public class EnemyBehaviour : MonoBehaviour
         StartCoroutine(DoAction());
     }
 
-    IEnumerator DoAction()
+    //Lets the enemy choose their actions based on the difficulty
+    public IEnumerator DoAction()
     {
+        //Number used for random position
         int randomIndex;
+        //Number used to determinate if the Enemy is going to change position, hide or shoot
         int randomAction = UnityEngine.Random.Range(0, 10);
+        //If in easy mode (less than 3 deaths)
         if (difficulty == 1)
         {
             randomIndex = UnityEngine.Random.Range(0, 2);
-            if(randomAction > 8)
+            if(randomAction >= 8)
             {
-                if(randomAction == 10)
+                if(randomAction == 9)
                 {
                     yield return new WaitForSeconds(shootDowntime);
                     StartCoroutine(Shoot());
@@ -87,14 +90,14 @@ public class EnemyBehaviour : MonoBehaviour
             transform.position = positionList[randomIndex];
             yield return new WaitForSeconds(actionInterval);
         }
-        //If normal pattern is choosen
+        //If in normal mode(less than 10 deaths more than 3)
         if (difficulty == 2)
         {
             randomIndex = UnityEngine.Random.Range(0, 2);
             transform.position = positionList[randomIndex];
             yield return new WaitForSeconds(actionInterval);
         }
-        //If hard pattern is choosen
+        //If in hard mode(more than 10 deaths)
         if (difficulty == 3)
         {
             randomIndex = UnityEngine.Random.Range(0, 2);
@@ -104,12 +107,16 @@ public class EnemyBehaviour : MonoBehaviour
         StartCoroutine(DoAction());
     }
 
+    //Shoot the player
     IEnumerator Shoot()
     {
+        player.GetComponent<PlayerHealth>().TakeDamage();
         yield return new WaitForSeconds(shootDowntime);
+        StartCoroutine(DoAction());
     }
 
-    void ChangeDifficulty()
+    //Makes Enemy able to use more positions based on the number of times Enemy died
+    public void ChangeDifficulty()
     {
         difficulty = 1;
         if (internalDifficulty >= 3)
@@ -122,7 +129,8 @@ public class EnemyBehaviour : MonoBehaviour
         }
     }
 
-    void DecrementIntervals()
+    //Makes the Enemy faster based on the number of times Enemy died
+    public void DecrementIntervals()
     {
         if (internalDifficulty >= 19)
         {
@@ -133,6 +141,7 @@ public class EnemyBehaviour : MonoBehaviour
         shootDowntime /= Mathf.Pow(1.02f, internalDifficulty);
     }
 
+    //Enemy hides from attacks
     IEnumerator Hide()
     {
         hidden = true;

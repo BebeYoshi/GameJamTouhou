@@ -22,34 +22,26 @@ public class JumpCrounch : MonoBehaviour
 
     void Update()
     {
-        action = Input.GetAxisRaw("Vertical");
-        if(action == 1f)
+        if(Input.GetButton("Jump") && crounch == false)
         {
-            StartCoroutine(Jump());
+            idle = false;
+            jump = true;
         }
-        if (action == -1f)
+        if (Input.GetButtonUp("Jump"))
         {
-            StartCoroutine(Crounch());
+            idle = true;
+            jump = false;
+        }
+        if (Input.GetButton("Crounch") && jump == false)
+        {
+            idle = false;
+            crounch = true;
+        }
+        if (Input.GetButtonUp("Crounch"))
+        {
+            idle = true;
+            crounch = false;
         }
     }
 
-    IEnumerator Jump()
-    {
-        idle = false;
-        crounch = false;
-        jump = true;
-        yield return new WaitForSeconds(1);
-        idle = true;
-        jump = false;
-    }
-
-    IEnumerator Crounch()
-    {
-        idle = false;
-        crounch = true;
-        jump = false;
-        yield return new WaitForSeconds(1);
-        idle = true;
-        crounch = false;
-    }
 }

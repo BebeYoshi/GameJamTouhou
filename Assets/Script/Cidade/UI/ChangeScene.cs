@@ -13,4 +13,8 @@ public class ChangeScene : MonoBehaviour
     public void loadSceneB(){
         SceneManager.LoadScene("Cidade");
     }
+
+    public void loadSceneC(){
+        SceneManager.LoadScene("Snowballfight");
+    }
 }
