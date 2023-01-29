@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Npc_UI : MonoBehaviour
 {
     public GameObject npcPanel;
-    [SerializeField] private string tipo = "";
+    [SerializeField] private int tipo; //1 = Snowboard, 2 = Snowfight, 3 = Cooking, 4 = Snowman
     public Button buyButton;
 
 
@@ -31,19 +31,19 @@ public class Npc_UI : MonoBehaviour
 
     public void CheckScore(){
         switch(tipo){
-            case "Snowboard":
+            case 1:
                 if(Info_Player.score_snowboard >= 2000 && Info_Player.item_snowboard == false){
                     Debug.Log(Info_Player.score_snowboard);
                     buyButton.interactable = true;
                 }
             break;
-            case "Snowfight":
+            case 2:
 
             break;
-            case "Cooking":
+            case 3:
 
             break;
-            case "Snowman":
+            case 4:
 
             break;
         }

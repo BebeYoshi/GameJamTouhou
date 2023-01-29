@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Loja.unity
     guid: 719394a0dd913b2419c16b0864846210
+  - enabled: 1
+    path: Assets/Scenes/Snowballfight.unity
+    guid: 37961d3ccee24554abdb5e7b3506f658
   m_configObjects: {}
