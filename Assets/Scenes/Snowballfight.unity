@@ -2776,8 +2776,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -4635,6 +4635,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   src: {fileID: 1610476469}
-  sfx1: {fileID: 8300000, guid: 816e537c4042a6c44888a2e91886e7ed, type: 3}
+  sfx1: {fileID: 8300000, guid: 65f8e23b98ca9de4897fc6a045004610, type: 3}
   sfx2: {fileID: 8300000, guid: 816e537c4042a6c44888a2e91886e7ed, type: 3}
   sfx3: {fileID: 8300000, guid: 1025453fdf3fdf746babc3b1d0e433af, type: 3}
