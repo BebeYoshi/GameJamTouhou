@@ -8,6 +8,7 @@ public class ScorePoint : MonoBehaviour
 
     public int score;
     public UIGameOverBall uiGameOver;
+    public GameObject tip;
     public TMP_Text textoScore;
 
 
@@ -15,6 +16,10 @@ public class ScorePoint : MonoBehaviour
     {
         score = 0;
         textoScore.SetText("Score: " + score.ToString());
+        if(Info_Player.tries_snowballfight == 0 || Info_Player.score_snowballfight < 1000)
+        {
+            StartCoroutine(GiveTip());
+        }
     }
 
     public void Score()
@@ -36,5 +41,12 @@ public class ScorePoint : MonoBehaviour
         {
             uiGameOver.HighScore(false);
         }
+    }
+
+    IEnumerator GiveTip()
+    {
+        tip.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        tip.SetActive(false);
     }
 }

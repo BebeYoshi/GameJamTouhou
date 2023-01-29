@@ -8,6 +8,11 @@ public static class Info_Player
     private static int p_score_snowboard = 0;
     private static int p_score_snowballfight = 0;
     private static int p_score_jorge = 0;
+    private static int p_score_sopa = 0;
+    private static int p_tries_snowboard = 0;
+    private static int p_tries_snowballfight = 0;
+    private static int p_tries_jorge = 0;
+    private static int p_tries_sopa = 0;
     private static int p_totalizador = 0;
     private static bool p_finalizado = false;
     private static bool p_item_snowboard = false;
@@ -49,6 +54,36 @@ public static class Info_Player
     {
         get { return p_score_snowballfight; }
         set { p_score_snowballfight = value; }
+    }
+
+    public static int score_sopa
+    {
+        get { return p_score_snowboard; }
+        set { p_score_snowboard = value; }
+    }
+
+    public static int tries_snowboard
+    {
+        get { return p_score_snowboard; }
+        set { p_score_snowboard = value; }
+    }
+
+    public static int tries_jorge
+    {
+        get { return p_score_jorge; }
+        set { p_score_jorge = value; }
+    }
+
+    public static int tries_snowballfight
+    {
+        get { return p_score_snowballfight; }
+        set { p_score_snowballfight = value; }
+    }
+
+    public static int tries_sopa
+    {
+        get { return p_score_snowboard; }
+        set { p_score_snowboard = value; }
     }
 
     public static bool item_snowman
