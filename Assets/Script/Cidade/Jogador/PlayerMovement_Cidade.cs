@@ -8,7 +8,10 @@ public class PlayerMovement_Cidade : MonoBehaviour
     public float moveSpeed = 3.8f;
     public bool isAllowed = true;
 
+
     public Rigidbody2D rb;
+    public Sprite playerFrente;
+    public Sprite playerCostas;
 
     Vector2 movement;
 
@@ -21,10 +24,26 @@ public class PlayerMovement_Cidade : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         if(movement.x <0){
-            this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
+            if(this.gameObject.GetComponent<SpriteRenderer>().sprite == playerFrente){
+                this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
+            }
+            else{
+                this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
+            }
         }
         else if(movement.x >0){
-            this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
+           if(this.gameObject.GetComponent<SpriteRenderer>().sprite == playerFrente){
+                this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
+            }
+            else{
+                this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
+            }
+        }
+        if(movement.y <0){
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = playerFrente;
+        }
+        if(movement.y >0){
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = playerCostas;
         }
         
     }

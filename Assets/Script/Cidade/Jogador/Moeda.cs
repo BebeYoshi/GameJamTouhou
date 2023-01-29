@@ -19,7 +19,7 @@ public class Moeda : MonoBehaviour
         Info_Player.score_snowboard = 2000;
         moedas = Info_Player.coins;
         textoMoedas.SetText(moedas.ToString());
-        textoItem.SetText("Buy the necessary items to end the winter!");
+        textoItem.SetText("Buy the necessary items to end the winter! Press 'E' to interact");
     }
     
     public void attMoedas(){
