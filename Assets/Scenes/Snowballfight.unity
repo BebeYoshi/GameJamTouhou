@@ -1383,6 +1383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
+  textHealth: {fileID: 1298208236}
   immuneTime: 0
   immune: 0
   hidden: 0
@@ -4078,6 +4079,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   deaths: 0
+  textHealth: {fileID: 1254648974}
   immuneTime: 0
   hidden: 0
   immune: 0

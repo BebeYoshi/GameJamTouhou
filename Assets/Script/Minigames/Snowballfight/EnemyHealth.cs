@@ -43,6 +43,7 @@ public class EnemyHealth : MonoBehaviour
             gameObject.GetComponent<EnemyBehaviour>().ChangeDifficulty();
             gameObject.GetComponent<EnemyBehaviour>().DecrementIntervals();
             health = 3;
+            textHealth.SetText("Health: " + health.ToString());
         }
     }
 
