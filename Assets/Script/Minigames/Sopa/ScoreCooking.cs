@@ -7,7 +7,7 @@ public class ScoreCooking : MonoBehaviour
 {
 
     public int score;
-    public UIGameOverBall uiGameOver;
+    public UIGameOverCooking uiGameOver;
     public GameObject tip;
     public TMP_Text textoScore;
 
@@ -22,15 +22,15 @@ public class ScoreCooking : MonoBehaviour
         }
     }
 
-    public void Score()
+    public void Score(int value)
     {
-        score += 200;
+        score += value;
         textoScore.SetText("Score: " + score.ToString());
     }
 
     public void FinaldeJogo()
     {
-        Info_Player.coins += (score / 25);
+        Info_Player.coins += (score / 75);
         Info_Player.tries_sopa++;
         if (Info_Player.score_sopa < score)
         {
