@@ -36,6 +36,8 @@ public class EnemyBehaviour : MonoBehaviour
     public bool hidden;
     //So Enemy can't attack right after hiding or starting the game
     public bool noAttack;
+    //So Enemy can't hide multiple times
+    public bool noHide;
 
     public Sprite attackEnemy;
     public Sprite dodgeEnemy;
@@ -65,6 +67,7 @@ public class EnemyBehaviour : MonoBehaviour
         internalDifficulty = gameObject.GetComponent<EnemyHealth>().deaths;
         hidden = false;
         noAttack = true;
+        noHide = false;
 
         ChangeDifficulty();
         DecrementIntervals();
@@ -90,12 +93,13 @@ public class EnemyBehaviour : MonoBehaviour
                 StartCoroutine(Shoot());
                 yield break;
             }
-            if (randomAction >= 8)
+            if (randomAction >= 8 && !noHide)
             {
                 StartCoroutine(Hide());
                 yield break;
             }
             noAttack = false;
+            noHide = false;
             transform.position = positionList[randomIndex];
             yield return new WaitForSeconds(actionInterval);
         }
@@ -111,12 +115,13 @@ public class EnemyBehaviour : MonoBehaviour
                 StartCoroutine(Shoot());
                 yield break;
             }
-            if (randomAction >= 6)
+            if (randomAction >= 6 && !noHide)
             {
                 StartCoroutine(Hide());
                 yield break;
             }
             noAttack = false;
+            noHide = false;
             transform.position = positionList[randomIndex];
             yield return new WaitForSeconds(actionInterval);
         }
@@ -132,12 +137,13 @@ public class EnemyBehaviour : MonoBehaviour
                 StartCoroutine(Shoot());
                 yield break;
             }
-            if (randomAction >= 5)
+            if (randomAction >= 5 && !noHide)
             {
                 StartCoroutine(Hide());
                 yield break;
             }
             noAttack = false;
+            noHide = false;
             transform.position = positionList[randomIndex];
             yield return new WaitForSeconds(actionInterval);
         }
@@ -190,6 +196,7 @@ public class EnemyBehaviour : MonoBehaviour
         yield return new WaitForSeconds(2f);
         hidden = false;
         noAttack = true;
+        noHide = true;
         this.gameObject.GetComponent<SpriteRenderer>().sprite = dodgeEnemy;
         StartCoroutine(DoAction());
     }
