@@ -8,6 +8,7 @@ public class ScoreJorge : MonoBehaviour
 
     public int score;
     public UIGameOverJorge uiGameOver;
+    public GameObject tip;
     public TMP_Text textoScore;
 
 
@@ -15,6 +16,10 @@ public class ScoreJorge : MonoBehaviour
     {
         score = 0;
         textoScore.SetText("Score: " + score.ToString());
+        if (Info_Player.tries_jorge == 0 || Info_Player.score_jorge < 1000)
+        {
+            StartCoroutine(GiveTip());
+        }
     }
 
     public void Score(int value)
@@ -25,8 +30,9 @@ public class ScoreJorge : MonoBehaviour
 
     public void FinaldeJogo()
     {
-        Info_Player.coins += (score / 25);
+        Info_Player.coins += (score / 50);
         uiGameOver.ToggleCanvas();
+        Info_Player.tries_jorge++;
         if (Info_Player.score_jorge < score)
         {
             Info_Player.score_jorge = score;
@@ -36,5 +42,12 @@ public class ScoreJorge : MonoBehaviour
         {
             uiGameOver.HighScore(false);
         }
+    }
+
+    IEnumerator GiveTip()
+    {
+        tip.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        tip.SetActive(false);
     }
 }

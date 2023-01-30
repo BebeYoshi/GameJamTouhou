@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8379320799859556661}
   - component: {fileID: 8379320799859556663}
   - component: {fileID: -4701348817021634037}
+  - component: {fileID: 3111020503573547839}
   m_Layer: 0
   m_Name: jorgey4
   m_TagString: Untagged
@@ -245,7 +246,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragging: 0
+  initialPosition: {x: 0, y: 0, z: 0}
   wearPrefab: {fileID: 4283381882985032019, guid: 2b509e1c2b045234eb73fba2c89ac683, type: 3}
   wearObject: {fileID: 0}
   Jorge: {fileID: 0}
   weared: 0
+--- !u!114 &3111020503573547839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8379320799859556658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a624eaca71c4a4e4a88c71136c8da6b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  src: {fileID: 0}
+  sfx1: {fileID: 8300000, guid: ceada5c3dafd1f245ba7ba32b9d76720, type: 3}
+  sfx2: {fileID: 8300000, guid: ceada5c3dafd1f245ba7ba32b9d76720, type: 3}
+  sfx3: {fileID: 0}

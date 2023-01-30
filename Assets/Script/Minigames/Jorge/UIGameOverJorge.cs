@@ -8,6 +8,8 @@ public class UIGameOverJorge : MonoBehaviour
 
     public TMP_Text textoHighScore;
 
+    public TMP_Text dialogueGameOver;
+
     public GameObject painel;
 
     public void ToggleCanvas()
@@ -15,6 +17,7 @@ public class UIGameOverJorge : MonoBehaviour
         if(!painel.activeSelf)
         {
             painel.SetActive(true);
+            DialogueGameOver();
         }
         else
         {
@@ -31,6 +34,40 @@ public class UIGameOverJorge : MonoBehaviour
         else
         {
             textoHighScore.SetText("High Score: " + Info_Player.score_jorge.ToString() + "!");
+        }
+    }
+
+    public void DialogueGameOver()
+    {
+        if (Info_Player.score_jorge == 0)
+        {
+            dialogueGameOver.SetText("Ok so: The Ying Yang orbs are for Reimu, little snowcat and fox are for Yukari, the sakura tree is for Yuyuko, swords for Youmu, wait is that broom for me?");
+            return;
+        }
+        if (Info_Player.score_jorge <= 2000 && Info_Player.tries_jorge <= 5)
+        {
+            dialogueGameOver.SetText("Ze~, why do I have to dress up Jorge multiple times...");
+        }
+        if (Info_Player.score_jorge <= 2000 && Info_Player.tries_jorge > 5)
+        {
+            dialogueGameOver.SetText("I hate you Jorge.");
+        }
+        if (Info_Player.score_jorge >= 2000 && Info_Player.tries_jorge == 1)
+        {
+            dialogueGameOver.SetText("I got a high enough score for the item on my first try, guess I'm pretty good at dressing up Jorge");
+            return;
+        }
+        if (Info_Player.score_jorge >= 2000)
+        {
+            dialogueGameOver.SetText("I got a high enough score for the item, also why do I have to dress up Jorge faster each time?");
+        }
+        if (Info_Player.score_jorge >= 3000)
+        {
+            dialogueGameOver.SetText("Why did we name a snowman Jorge?");
+        }
+        if (Info_Player.score_jorge >= 5000)
+        {
+            dialogueGameOver.SetText("Ok, I guess Jorge is cool, ze~");
         }
     }
 }

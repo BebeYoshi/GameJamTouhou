@@ -12,6 +12,7 @@ public class DragObject : MonoBehaviour
     public void Start()
     {
         initialPosition = transform.position;
+        this.gameObject.GetComponent<SoundEffectPlayer>().src = GameObject.Find("Audio Source").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -28,12 +29,14 @@ public class DragObject : MonoBehaviour
 
     private void OnMouseDown()
     {
+        this.gameObject.GetComponent<SoundEffectPlayer>().Play1();
         offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
         dragging = true;
     }
 
     private void OnMouseUp()
     {
+        this.gameObject.GetComponent<SoundEffectPlayer>().Play2();
         dragging = false;
     }
 }

@@ -40,31 +40,33 @@ public class UIGameOver : MonoBehaviour
     {
         if (Info_Player.score_snowboard == 0)
         {
-            dialogueGameOver.SetText("I should try dodging her snowball by pressing DOWN and shooting her with snowball by pressing Mouse1.");
+            dialogueGameOver.SetText("I should try dodging incoming obstacles with arrow keys...");
+            return;
         }
         if (Info_Player.score_snowboard <= 2000 && Info_Player.tries_snowboard <= 5)
         {
-            dialogueGameOver.SetText("Ugh, that little fairy gets on my nerves sometimes...");
+            dialogueGameOver.SetText("Ze~, why is the mountain full of rocks and trees?");
         }
         if (Info_Player.score_snowboard <= 2000 && Info_Player.tries_snowboard > 5)
         {
-            dialogueGameOver.SetText("STOP DODGING, LET ME SAVE THE SPRING!!");
+            dialogueGameOver.SetText("I hate snowboarding!");
         }
         if (Info_Player.score_snowboard >= 2000 && Info_Player.tries_snowboard == 1)
         {
-            dialogueGameOver.SetText("First try, piece of cake!");
+            dialogueGameOver.SetText("I got a high enough score for the item on my first try, I am the greatest magician afterall, ze~");
+            return;
         }
         if (Info_Player.score_snowboard >= 2000)
         {
-            dialogueGameOver.SetText("Why is she so fast...");
+            dialogueGameOver.SetText("I got a high enough score for the item, also boulders and branches at the same time? Jezz.");
         }
         if (Info_Player.score_snowboard >= 3000)
         {
-            dialogueGameOver.SetText("No matter how many times she is defeated, she keeps coming back stronger...");
+            dialogueGameOver.SetText("This mountain is definetly an incident by itself, just look at how many logs there are...");
         }
         if (Info_Player.score_snowboard >= 5000)
         {
-            dialogueGameOver.SetText("I have better things to do.");
+            dialogueGameOver.SetText("Snowboarding is not going to make me a better magician at all.");
         }
     }
 }
