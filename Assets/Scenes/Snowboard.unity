@@ -5690,7 +5690,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textoHighScore: {fileID: 1529710074}
   dialogueGameOver: {fileID: 1524865977}
+  marisaHappy: {fileID: 21300000, guid: 29ec50543f2834048ba4df448f97f3f9, type: 3}
+  marisaAngry: {fileID: 21300000, guid: 930eb24d2bde9b24ba674a87f46fc96f, type: 3}
   painel: {fileID: 1439659411}
+  personagem: {fileID: 1915647165}
 --- !u!1 &2004182112
 GameObject:
   m_ObjectHideFlags: 0
