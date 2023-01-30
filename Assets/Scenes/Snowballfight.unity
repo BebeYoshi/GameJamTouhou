@@ -2358,7 +2358,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textoHighScore: {fileID: 1872003635}
   dialogueGameOver: {fileID: 1125940214}
+  reimuHappy: {fileID: 21300000, guid: 0219dc72631a59f4f9b5620bfef26ae3, type: 3}
+  reimuAngry: {fileID: 21300000, guid: 3b2367306df785a46bbe92ac452ace44, type: 3}
   painel: {fileID: 1978093097}
+  personagem: {fileID: 1934358061}
 --- !u!1 &1033301552
 GameObject:
   m_ObjectHideFlags: 0
@@ -5079,6 +5082,7 @@ MonoBehaviour:
   difficulty: 0
   hidden: 0
   noAttack: 0
+  noHide: 0
   attackEnemy: {fileID: 21300000, guid: d7a463549ab963a4c912281a697d8619, type: 3}
   dodgeEnemy: {fileID: 21300000, guid: 1588cfe20096cc5458d0f42efec86941, type: 3}
   hiddenEnemy: {fileID: 21300000, guid: 214860d5718f0db4a8746e7051823621, type: 3}

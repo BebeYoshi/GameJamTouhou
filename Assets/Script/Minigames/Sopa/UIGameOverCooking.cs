@@ -45,38 +45,43 @@ public class UIGameOverCooking : MonoBehaviour
     {
         if (Info_Player.score_sopa <= 2000 && Info_Player.tries_sopa <= 5)
         {
-            dialogueGameOver.SetText("Ugh, that little fairy gets on my nerves sometimes...");
-            personagem.GetComponent<SpriteRenderer>().sprite = marisa;
+            dialogueGameOver.SetText("I guess I am not that good at cooking...");
+            personagem.GetComponent<UnityEngine.UI.Image>().sprite = marisa;
         }
         if (Info_Player.score_sopa <= 2000 && Info_Player.tries_sopa > 5)
         {
-            dialogueGameOver.SetText("STOP DODGING, LET ME SAVE THE SPRING!!");
-            personagem.GetComponent<SpriteRenderer>().sprite = marisa;
+            dialogueGameOver.SetText("Hmm... I think that stealing a soup is easier than making one!");
+            personagem.GetComponent<UnityEngine.UI.Image>().sprite = marisa;
         }
         if (Info_Player.score_sopa == 0)
         {
-            dialogueGameOver.SetText("I should try dodging her snowball by pressing DOWN, and shooting her by pressing Mouse1.");
-            personagem.GetComponent<SpriteRenderer>().sprite = marisa;
+            dialogueGameOver.SetText("You should follow what Shinmyoumaru is saying!");
+            personagem.GetComponent<UnityEngine.UI.Image>().sprite = marisa;
         }
         if (Info_Player.score_sopa >= 2000)
         {
-            dialogueGameOver.SetText("I got a score high enough for the item, also why is she so fast?");
-            personagem.GetComponent<SpriteRenderer>().sprite = reimu;
+            dialogueGameOver.SetText("We got a score high enough for the item, also this soup smells delicious!");
+            personagem.GetComponent<UnityEngine.UI.Image>().sprite = reimu;
         }
         if (Info_Player.score_sopa >= 3000)
         {
-            dialogueGameOver.SetText("No matter how many times she is defeated, she keeps coming back stronger...");
-            personagem.GetComponent<SpriteRenderer>().sprite = reimu;
+            dialogueGameOver.SetText("I love cooking! It warms my soul in this freezing winter!");
+            personagem.GetComponent<UnityEngine.UI.Image>().sprite = reimu;
         }
         if (Info_Player.score_sopa >= 5000)
         {
-            dialogueGameOver.SetText("I have better things to do.");
-            personagem.GetComponent<SpriteRenderer>().sprite = marisa;
+            dialogueGameOver.SetText("Hey Reimu, I think this is enough... Remember we gotta save spring!");
+            personagem.GetComponent<UnityEngine.UI.Image>().sprite = marisa;
         }
         if (Info_Player.score_sopa >= 2000 && Info_Player.tries_sopa == 1)
         {
-            dialogueGameOver.SetText("I got a score high enough for the item on my first try, piece of cake!");
-            personagem.GetComponent<SpriteRenderer>().sprite = reimu;
+            dialogueGameOver.SetText("We got a score high enough for the item on the first try! See Marisa? Cooking is easy!");
+            personagem.GetComponent<UnityEngine.UI.Image>().sprite = reimu;
+        }
+        if (Info_Player.score_sopa >= 5000 && Info_Player.tries_sopa == 1)
+        {
+            dialogueGameOver.SetText("Fazer uma sopa fifififi, fazer uma sopa pa nois!");
+            personagem.GetComponent<UnityEngine.UI.Image>().sprite = marisa;
         }
     }
 }
