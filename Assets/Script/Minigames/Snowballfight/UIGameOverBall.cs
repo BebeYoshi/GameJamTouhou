@@ -39,11 +39,6 @@ public class UIGameOverBall : MonoBehaviour
 
     public void DialogueGameOver()
     {
-        if (Info_Player.score_snowballfight == 0)
-        {
-            dialogueGameOver.SetText("I should try dodging her snowball by pressing DOWN and shooting her with snowball by pressing Mouse1.");
-            return;
-        }
         if (Info_Player.score_snowballfight <= 2000 && Info_Player.tries_snowballfight <= 5)
         {
             dialogueGameOver.SetText("Ugh, that little fairy gets on my nerves sometimes...");
@@ -52,10 +47,9 @@ public class UIGameOverBall : MonoBehaviour
         {
             dialogueGameOver.SetText("STOP DODGING, LET ME SAVE THE SPRING!!");
         }
-        if (Info_Player.score_snowballfight >= 2000 && Info_Player.tries_snowballfight == 1)
+        if (Info_Player.score_snowballfight == 0)
         {
-            dialogueGameOver.SetText("I got a high enough score for the item on my first try, piece of cake!");
-            return;
+            dialogueGameOver.SetText("I should try dodging her snowball by pressing DOWN and shooting her with snowball by pressing Mouse1.");
         }
         if (Info_Player.score_snowballfight >= 2000)
         {
@@ -68,6 +62,10 @@ public class UIGameOverBall : MonoBehaviour
         if (Info_Player.score_snowballfight >= 5000)
         {
             dialogueGameOver.SetText("I have better things to do.");
+        }
+        if (Info_Player.score_snowballfight >= 2000 && Info_Player.tries_snowballfight == 1)
+        {
+            dialogueGameOver.SetText("I got a high enough score for the item on my first try, piece of cake!");
         }
     }
 }
