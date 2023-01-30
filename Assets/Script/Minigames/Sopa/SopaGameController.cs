@@ -52,11 +52,13 @@ public class SopaGameController : MonoBehaviour
             }
             if (success && (cookeds.Count == order.Count))
             {
+                this.gameObject.GetComponent<SoundEffectPlayer>().Play3();
                 ScoreSopa.Score(order.Count*150);
                 StartCoroutine(TurnSpoonAround());
                 NewRound();
             } else if (!success)
             {
+                this.gameObject.GetComponent<SoundEffectPlayer>().Play1();
                 GameOver = true;
                 ScoreSopa.FinaldeJogo();
             }

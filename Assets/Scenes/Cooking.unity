@@ -200,6 +200,134 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6277884}
   m_CullTransparentMesh: 1
+--- !u!1 &70863259
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 70863261}
+  - component: {fileID: 70863260}
+  m_Layer: 0
+  m_Name: Audio Source GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &70863260
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70863259}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &70863261
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70863259}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.3797991, y: 1.053657, z: 60.50217}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &84550082
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,6 +340,7 @@ GameObject:
   - component: {fileID: 84550086}
   - component: {fileID: 84550085}
   - component: {fileID: 84550084}
+  - component: {fileID: 84550087}
   m_Layer: 0
   m_Name: chawansal
   m_TagString: Untagged
@@ -347,6 +476,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &84550087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84550082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a624eaca71c4a4e4a88c71136c8da6b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  src: {fileID: 1142185392}
+  sfx1: {fileID: 8300000, guid: 22373af8c2594be43a533d44101cd71c, type: 3}
+  sfx2: {fileID: 8300000, guid: 22373af8c2594be43a533d44101cd71c, type: 3}
+  sfx3: {fileID: 0}
 --- !u!1 &90112966
 GameObject:
   m_ObjectHideFlags: 0
@@ -1559,6 +1704,7 @@ GameObject:
   - component: {fileID: 738979258}
   - component: {fileID: 738979257}
   - component: {fileID: 738979256}
+  - component: {fileID: 738979259}
   m_Layer: 0
   m_Name: chawannoodles
   m_TagString: Untagged
@@ -1694,6 +1840,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &738979259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738979254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a624eaca71c4a4e4a88c71136c8da6b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  src: {fileID: 1142185392}
+  sfx1: {fileID: 8300000, guid: 22373af8c2594be43a533d44101cd71c, type: 3}
+  sfx2: {fileID: 8300000, guid: 22373af8c2594be43a533d44101cd71c, type: 3}
+  sfx3: {fileID: 0}
 --- !u!1 &746005895
 GameObject:
   m_ObjectHideFlags: 0
@@ -1706,6 +1868,7 @@ GameObject:
   - component: {fileID: 746005899}
   - component: {fileID: 746005898}
   - component: {fileID: 746005897}
+  - component: {fileID: 746005900}
   m_Layer: 0
   m_Name: chawancarne
   m_TagString: Untagged
@@ -1841,6 +2004,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &746005900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746005895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a624eaca71c4a4e4a88c71136c8da6b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  src: {fileID: 1142185392}
+  sfx1: {fileID: 8300000, guid: 22373af8c2594be43a533d44101cd71c, type: 3}
+  sfx2: {fileID: 8300000, guid: 22373af8c2594be43a533d44101cd71c, type: 3}
+  sfx3: {fileID: 0}
 --- !u!1 &781435527
 GameObject:
   m_ObjectHideFlags: 0
@@ -1853,6 +2032,7 @@ GameObject:
   - component: {fileID: 781435529}
   - component: {fileID: 781435528}
   - component: {fileID: 781435531}
+  - component: {fileID: 781435532}
   m_Layer: 0
   m_Name: chawancebolinha
   m_TagString: Untagged
@@ -1988,6 +2168,22 @@ PolygonCollider2D:
       - {x: 0.40234375, y: 0.29296875}
       - {x: 0.29296875, y: 0.40234375}
       - {x: 0.15234375, y: 0.47265625}
+--- !u!114 &781435532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781435527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a624eaca71c4a4e4a88c71136c8da6b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  src: {fileID: 1142185392}
+  sfx1: {fileID: 8300000, guid: 22373af8c2594be43a533d44101cd71c, type: 3}
+  sfx2: {fileID: 8300000, guid: 22373af8c2594be43a533d44101cd71c, type: 3}
+  sfx3: {fileID: 0}
 --- !u!1 &819146078
 GameObject:
   m_ObjectHideFlags: 0
@@ -2371,6 +2567,7 @@ GameObject:
   - component: {fileID: 969260056}
   - component: {fileID: 969260055}
   - component: {fileID: 969260054}
+  - component: {fileID: 969260057}
   m_Layer: 0
   m_Name: chawanmiso
   m_TagString: Untagged
@@ -2506,6 +2703,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &969260057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969260052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a624eaca71c4a4e4a88c71136c8da6b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  src: {fileID: 1142185392}
+  sfx1: {fileID: 8300000, guid: 22373af8c2594be43a533d44101cd71c, type: 3}
+  sfx2: {fileID: 8300000, guid: 22373af8c2594be43a533d44101cd71c, type: 3}
+  sfx3: {fileID: 0}
 --- !u!1 &972344743
 GameObject:
   m_ObjectHideFlags: 0
@@ -2518,6 +2731,7 @@ GameObject:
   - component: {fileID: 972344747}
   - component: {fileID: 972344746}
   - component: {fileID: 972344745}
+  - component: {fileID: 972344748}
   m_Layer: 0
   m_Name: chawandashi
   m_TagString: Untagged
@@ -2653,6 +2867,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &972344748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 972344743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a624eaca71c4a4e4a88c71136c8da6b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  src: {fileID: 1142185392}
+  sfx1: {fileID: 8300000, guid: 22373af8c2594be43a533d44101cd71c, type: 3}
+  sfx2: {fileID: 8300000, guid: 22373af8c2594be43a533d44101cd71c, type: 3}
+  sfx3: {fileID: 0}
 --- !u!1 &993315685
 GameObject:
   m_ObjectHideFlags: 0
@@ -2852,6 +3082,134 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1098312941}
   m_CullTransparentMesh: 1
+--- !u!1 &1142185391
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1142185393}
+  - component: {fileID: 1142185392}
+  m_Layer: 0
+  m_Name: Audio Source Chawan
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1142185392
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142185391}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1142185393
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142185391}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.3797991, y: 1.053657, z: 60.50217}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1172224743
 GameObject:
   m_ObjectHideFlags: 0
@@ -4173,6 +4531,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1601036680}
   - component: {fileID: 1601036681}
+  - component: {fileID: 1601036682}
   m_Layer: 0
   m_Name: SopaGameController
   m_TagString: Untagged
@@ -4212,6 +4571,22 @@ MonoBehaviour:
   NumAtual: {fileID: 137069325}
   NumAnterior: {fileID: 819146080}
   spoon: {fileID: 1999261353}
+--- !u!114 &1601036682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601036679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a624eaca71c4a4e4a88c71136c8da6b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  src: {fileID: 70863260}
+  sfx1: {fileID: 8300000, guid: d979e2172b1f2864099187c5810aa5bf, type: 3}
+  sfx2: {fileID: 0}
+  sfx3: {fileID: 8300000, guid: cd09a744ccec757488c5bde37a983946, type: 3}
 --- !u!1 &1666312385
 GameObject:
   m_ObjectHideFlags: 0
@@ -4308,6 +4683,7 @@ GameObject:
   - component: {fileID: 1734192785}
   - component: {fileID: 1734192784}
   - component: {fileID: 1734192783}
+  - component: {fileID: 1734192786}
   m_Layer: 0
   m_Name: chawancebola
   m_TagString: Untagged
@@ -4443,6 +4819,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1734192786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734192781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a624eaca71c4a4e4a88c71136c8da6b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  src: {fileID: 1142185392}
+  sfx1: {fileID: 8300000, guid: 22373af8c2594be43a533d44101cd71c, type: 3}
+  sfx2: {fileID: 8300000, guid: 22373af8c2594be43a533d44101cd71c, type: 3}
+  sfx3: {fileID: 0}
 --- !u!1 &1742741680
 GameObject:
   m_ObjectHideFlags: 0
@@ -5101,6 +5493,7 @@ GameObject:
   - component: {fileID: 2027675080}
   - component: {fileID: 2027675079}
   - component: {fileID: 2027675078}
+  - component: {fileID: 2027675081}
   m_Layer: 0
   m_Name: chawantofu
   m_TagString: Untagged
@@ -5236,6 +5629,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2027675081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027675076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a624eaca71c4a4e4a88c71136c8da6b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  src: {fileID: 1142185392}
+  sfx1: {fileID: 8300000, guid: 22373af8c2594be43a533d44101cd71c, type: 3}
+  sfx2: {fileID: 8300000, guid: 22373af8c2594be43a533d44101cd71c, type: 3}
+  sfx3: {fileID: 0}
 --- !u!1 &2078861527
 GameObject:
   m_ObjectHideFlags: 0

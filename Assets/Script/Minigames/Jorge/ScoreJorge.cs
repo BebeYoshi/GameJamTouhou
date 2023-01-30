@@ -30,7 +30,7 @@ public class ScoreJorge : MonoBehaviour
 
     public void FinaldeJogo()
     {
-        Info_Player.coins += (score / 50);
+        Info_Player.coins += (score / 100);
         Info_Player.tries_jorge++;
         if (Info_Player.score_jorge < score)
         {
