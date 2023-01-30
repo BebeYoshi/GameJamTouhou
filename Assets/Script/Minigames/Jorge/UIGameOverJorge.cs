@@ -54,12 +54,12 @@ public class UIGameOverJorge : MonoBehaviour
         }
         if (Info_Player.score_jorge >= 2000 && Info_Player.tries_jorge == 1)
         {
-            dialogueGameOver.SetText("I got a high enough score for the item on my first try, guess I'm pretty good at dressing up Jorge");
+            dialogueGameOver.SetText("I got a score high enough for the item on my first try, guess I'm pretty good at dressing up Jorge");
             return;
         }
         if (Info_Player.score_jorge >= 2000)
         {
-            dialogueGameOver.SetText("I got a high enough score for the item, also why do I have to dress up Jorge faster each time?");
+            dialogueGameOver.SetText("I got a score high enough for the item, also why do I have to dress up Jorge faster each time?");
         }
         if (Info_Player.score_jorge >= 3000)
         {
