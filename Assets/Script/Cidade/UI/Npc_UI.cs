@@ -53,6 +53,7 @@ public class Npc_UI : MonoBehaviour
                 }
                 else {
                     textoLoja.SetText("I'm sure gathering more coins will not be a problem for you!");
+                    buyButton.interactable = false;
                 }
             break;
             case 1:
@@ -73,6 +74,7 @@ public class Npc_UI : MonoBehaviour
                 }
                 else {
                     textoLoja.SetText("Huh? The standard price is 40? These people don't know how to make money");
+                    buyButton.interactable = false;
                 }
 
 
@@ -87,6 +89,7 @@ public class Npc_UI : MonoBehaviour
                 }
                 else {
                     textoLoja.SetText("I'm afraid this isn't enough money for master.");
+                    buyButton.interactable = false;
                 }
 
 
@@ -105,6 +108,7 @@ public class Npc_UI : MonoBehaviour
                 }
                 else {
                     textoLoja.SetText("You know Marisa, this is a highly valued item.");
+                    buyButton.interactable = false;
                 }
             break;
         }
