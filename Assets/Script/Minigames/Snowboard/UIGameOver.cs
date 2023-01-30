@@ -38,11 +38,6 @@ public class UIGameOver : MonoBehaviour
 
     public void DialogueGameOver()
     {
-        if (Info_Player.score_snowboard == 0)
-        {
-            dialogueGameOver.SetText("I should try dodging incoming obstacles with arrow keys...");
-            return;
-        }
         if (Info_Player.score_snowboard <= 2000 && Info_Player.tries_snowboard <= 5)
         {
             dialogueGameOver.SetText("Ze~, why is the mountain full of rocks and trees?");
@@ -51,10 +46,9 @@ public class UIGameOver : MonoBehaviour
         {
             dialogueGameOver.SetText("I hate snowboarding!");
         }
-        if (Info_Player.score_snowboard >= 2000 && Info_Player.tries_snowboard == 1)
+        if (Info_Player.score_snowboard == 0)
         {
-            dialogueGameOver.SetText("I got a high enough score for the item on my first try, I am the greatest magician afterall, ze~");
-            return;
+            dialogueGameOver.SetText("I should try dodging incoming obstacles with arrow keys...");
         }
         if (Info_Player.score_snowboard >= 2000)
         {
@@ -67,6 +61,11 @@ public class UIGameOver : MonoBehaviour
         if (Info_Player.score_snowboard >= 5000)
         {
             dialogueGameOver.SetText("Snowboarding is not going to make me a better magician at all.");
+        }
+        if (Info_Player.score_snowboard >= 2000 && Info_Player.tries_snowboard == 1)
+        {
+            dialogueGameOver.SetText("I got a high enough score for the item on my first try, I am the greatest magician afterall, ze~");
+            return;
         }
     }
 }
