@@ -41,7 +41,7 @@ public class UIGameOverJorge : MonoBehaviour
     {
         if (Info_Player.score_jorge == 0)
         {
-            dialogueGameOver.SetText("Ok so: The Ying Yang orbs are for Reimu, little snowcat and fox are for Yukari, the sakura tree is for Yuyuko, swords for Youmu, wait is that broom for me?");
+            dialogueGameOver.SetText("Hey! I will give you the answers:, Orbs: Reimu, Sakura Tree: Yuyuko, Swords: Youmu, Gap: Yukari, and of course, the broom is for me!");
             return;
         }
         if (Info_Player.score_jorge <= 2000 && Info_Player.tries_jorge <= 5)
