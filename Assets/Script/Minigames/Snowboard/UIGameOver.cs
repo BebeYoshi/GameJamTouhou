@@ -41,6 +41,7 @@ public class UIGameOver : MonoBehaviour
         if (Info_Player.score_snowboard == 0)
         {
             dialogueGameOver.SetText("I should try dodging incoming obstacles with arrow keys...");
+            return;
         }
         if (Info_Player.score_snowboard <= 2000 && Info_Player.tries_snowboard <= 5)
         {
@@ -52,11 +53,12 @@ public class UIGameOver : MonoBehaviour
         }
         if (Info_Player.score_snowboard >= 2000 && Info_Player.tries_snowboard == 1)
         {
-            dialogueGameOver.SetText("First try, I am the greatest magician afterall, ze~");
+            dialogueGameOver.SetText("I got a high enough score for the item on my first try, I am the greatest magician afterall, ze~");
+            return;
         }
         if (Info_Player.score_snowboard >= 2000)
         {
-            dialogueGameOver.SetText("Boulders and branches at the same time? Jezz.");
+            dialogueGameOver.SetText("I got a high enough score for the item, also boulders and branches at the same time? Jezz.");
         }
         if (Info_Player.score_snowboard >= 3000)
         {

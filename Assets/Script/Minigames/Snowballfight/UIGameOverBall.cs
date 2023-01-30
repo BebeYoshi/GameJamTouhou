@@ -42,6 +42,7 @@ public class UIGameOverBall : MonoBehaviour
         if (Info_Player.score_snowballfight == 0)
         {
             dialogueGameOver.SetText("I should try dodging her snowball by pressing DOWN and shooting her with snowball by pressing Mouse1.");
+            return;
         }
         if (Info_Player.score_snowballfight <= 2000 && Info_Player.tries_snowballfight <= 5)
         {
@@ -53,11 +54,12 @@ public class UIGameOverBall : MonoBehaviour
         }
         if (Info_Player.score_snowballfight >= 2000 && Info_Player.tries_snowballfight == 1)
         {
-            dialogueGameOver.SetText("First try, piece of cake!");
+            dialogueGameOver.SetText("I got a high enough score for the item on my first try, piece of cake!");
+            return;
         }
         if (Info_Player.score_snowballfight >= 2000)
         {
-            dialogueGameOver.SetText("Why is she so fast...");
+            dialogueGameOver.SetText("I got a high enough score for the item, also why is she so fast?");
         }
         if (Info_Player.score_snowballfight >= 3000)
         {
