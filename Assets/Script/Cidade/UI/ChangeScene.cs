@@ -26,4 +26,8 @@ public class ChangeScene : MonoBehaviour
     public void loadSceneE(){
         SceneManager.LoadScene("Ending");
     }
+
+    public void loadSceneF(){
+        SceneManager.LoadScene("Beginning");
+    }
 }
