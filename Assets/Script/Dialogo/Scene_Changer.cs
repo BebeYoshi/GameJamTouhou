@@ -8,6 +8,7 @@ public class Scene_Changer : MonoBehaviour
     
     public GameObject background;
     public GameObject ending;
+    public GameObject statistics;
 
     void Start()
     {
@@ -24,6 +25,7 @@ public class Scene_Changer : MonoBehaviour
         if(isEndScene){
                 background.SetActive(true);
                 ending.SetActive(true);
+                statistics.SetActive(true);
         }
         else{
             SceneManager.LoadScene("Cidade");
