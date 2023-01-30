@@ -54,12 +54,12 @@ public class UIGameOverBall : MonoBehaviour
         }
         if (Info_Player.score_snowballfight >= 2000 && Info_Player.tries_snowballfight == 1)
         {
-            dialogueGameOver.SetText("I got a high enough score for the item on my first try, piece of cake!");
+            dialogueGameOver.SetText("I got a score high enough for the item on my first try, piece of cake!");
             return;
         }
         if (Info_Player.score_snowballfight >= 2000)
         {
-            dialogueGameOver.SetText("I got a high enough score for the item, also why is she so fast?");
+            dialogueGameOver.SetText("I got a score high enough for the item, also why is she so fast?");
         }
         if (Info_Player.score_snowballfight >= 3000)
         {
