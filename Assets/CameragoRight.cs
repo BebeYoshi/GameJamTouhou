@@ -24,7 +24,7 @@ public class CameragoRight : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         movingSpeed --;
-        if(movingSpeed == -3f)
+        if(movingSpeed <= -3f)
         {
             StartCoroutine(TurnRight());
         }
@@ -35,7 +35,7 @@ public class CameragoRight : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         movingSpeed ++ ;
-        if (movingSpeed == 3f)
+        if (movingSpeed >= 3f)
         {
             StartCoroutine(TurnLeft());
         }
