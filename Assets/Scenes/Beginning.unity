@@ -1783,7 +1783,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7.51, y: -255.94}
+  m_AnchoredPosition: {x: -17, y: -229}
   m_SizeDelta: {x: 1278.36, y: 236.84}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1001640802
@@ -1815,8 +1815,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4288467957
-  m_fontColor: {r: 0.9622642, g: 0.8273081, b: 0.6127626, a: 1}
+    rgba: 4284331246
+  m_fontColor: {r: 0.9339623, g: 0.70603156, b: 0.36565503, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2861,7 +2861,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -16, y: -212}
+  m_AnchoredPosition: {x: -16, y: -182}
   m_SizeDelta: {x: 1807, y: 520}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1652983870
@@ -3282,3 +3282,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   background: {fileID: 38751423}
   ending: {fileID: 0}
+  statistics: {fileID: 0}

@@ -91,7 +91,7 @@ public class Text_Sprite : MonoBehaviour
             
             sprite3.sprite = listaSprites[i];
             if(isLily){
-                text.color = new Color32(255,216,154, 255);
+                text.color = new Color32(238,180,93, 255);
                 sprite2.color = new Color(1f,1f,1f,.8f);
             }
             else {
