@@ -39,11 +39,6 @@ public class UIGameOverJorge : MonoBehaviour
 
     public void DialogueGameOver()
     {
-        if (Info_Player.score_jorge == 0)
-        {
-            dialogueGameOver.SetText("Hey! I will give you the answers:, Orbs: Reimu, Sakura Tree: Yuyuko, Swords: Youmu, Gap: Yukari, and of course, the broom is for me!");
-            return;
-        }
         if (Info_Player.score_jorge <= 2000 && Info_Player.tries_jorge <= 5)
         {
             dialogueGameOver.SetText("Ze~, why do I have to dress up Jorge multiple times...");
@@ -52,10 +47,9 @@ public class UIGameOverJorge : MonoBehaviour
         {
             dialogueGameOver.SetText("I hate you Jorge.");
         }
-        if (Info_Player.score_jorge >= 2000 && Info_Player.tries_jorge == 1)
+        if (Info_Player.score_jorge == 0)
         {
-            dialogueGameOver.SetText("I got a score high enough for the item on my first try, guess I'm pretty good at dressing up Jorge");
-            return;
+            dialogueGameOver.SetText("Hey! I will give you the answers:, Orbs: Reimu, Sakura Tree: Yuyuko, Swords: Youmu, Gap: Yukari, and of course, the broom is for me!");
         }
         if (Info_Player.score_jorge >= 2000)
         {
@@ -68,6 +62,10 @@ public class UIGameOverJorge : MonoBehaviour
         if (Info_Player.score_jorge >= 5000)
         {
             dialogueGameOver.SetText("Ok, I guess Jorge is cool, ze~");
+        }
+        if (Info_Player.score_jorge >= 2000 && Info_Player.tries_jorge == 1)
+        {
+            dialogueGameOver.SetText("I got a score high enough for the item on my first try, guess I'm pretty good at dressing up Jorge");
         }
     }
 }
