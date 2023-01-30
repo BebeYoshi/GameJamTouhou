@@ -32,7 +32,6 @@ public class ScorePoint : MonoBehaviour
     {
         Info_Player.coins += (score / 25);
         Info_Player.tries_snowballfight++;
-        uiGameOver.ToggleCanvas();
         if (Info_Player.score_snowballfight < score)
         {
             Info_Player.score_snowballfight = score;
@@ -42,6 +41,7 @@ public class ScorePoint : MonoBehaviour
         {
             uiGameOver.HighScore(false);
         }
+        uiGameOver.ToggleCanvas();
     }
 
     IEnumerator GiveTip()

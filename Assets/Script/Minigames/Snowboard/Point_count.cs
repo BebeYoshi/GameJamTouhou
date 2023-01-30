@@ -34,7 +34,6 @@ public class Point_count : MonoBehaviour
         Destroy(enemySpawner);
         Info_Player.coins += (score / 100);
         Info_Player.tries_snowboard++;
-        uiGameOver.ToggleCanvas();
         if (Info_Player.score_snowboard < score)
         {
             Info_Player.score_snowboard = score;
@@ -44,6 +43,7 @@ public class Point_count : MonoBehaviour
         {
             uiGameOver.HighScore(false);
         }
+        uiGameOver.ToggleCanvas();
     }
 
     IEnumerator GiveTip()

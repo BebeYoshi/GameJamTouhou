@@ -16,7 +16,7 @@ public class ScoreCooking : MonoBehaviour
     {
         score = 0;
         textoScore.SetText("Score: " + score.ToString());
-        if(Info_Player.tries_snowballfight == 0 || Info_Player.score_snowballfight < 1000)
+        if(Info_Player.tries_sopa == 0 || Info_Player.score_sopa < 1000)
         {
             StartCoroutine(GiveTip());
         }
@@ -31,17 +31,17 @@ public class ScoreCooking : MonoBehaviour
     public void FinaldeJogo()
     {
         Info_Player.coins += (score / 25);
-        Info_Player.tries_snowballfight++;
-        uiGameOver.ToggleCanvas();
-        if (Info_Player.score_snowballfight < score)
+        Info_Player.tries_sopa++;
+        if (Info_Player.score_sopa < score)
         {
-            Info_Player.score_snowballfight = score;
+            Info_Player.score_sopa = score;
             uiGameOver.HighScore(true);
         }
         else
         {
             uiGameOver.HighScore(false);
         }
+        uiGameOver.ToggleCanvas();
     }
 
     IEnumerator GiveTip()
