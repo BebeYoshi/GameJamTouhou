@@ -18,6 +18,7 @@ public class PlayerMovement_Cidade : MonoBehaviour
     // Update is called once per fra
     void Start(){
         isAllowed = true;
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
     void Update()
     {
