@@ -23,7 +23,6 @@ public class    CookingController : MonoBehaviour
         {
             if (ingredients[i].GetComponent<CookingObject>().cooked)
             {
-                Debug.Log(i);
                 cookeds.Add(i);
                 ingredients[i].GetComponent<CookingObject>().cooked = false;
             }
