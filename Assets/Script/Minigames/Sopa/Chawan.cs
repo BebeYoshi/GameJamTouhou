@@ -7,6 +7,7 @@ public class Chawan : MonoBehaviour
     public Texture2D NormalTexture;
     public Texture2D GrabTexture;
     public GameObject ingrediente;
+    public GameObject Sopa;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +19,6 @@ public class Chawan : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     private void OnMouseDown()
@@ -31,6 +31,12 @@ public class Chawan : MonoBehaviour
 
     private void OnMouseUp()
     {
+        var col = ingrediente.GetComponent<Collider2D>();
+        var colSopa = Sopa.GetComponent<Collider2D>();
+        if (col.IsTouching(colSopa))
+        {
+            ingrediente.GetComponent<CookingObject>().cooked = true;
+        }
         Cursor.SetCursor(NormalTexture, Vector2.zero, CursorMode.Auto);
         ingrediente.GetComponent<CookingObject>().dragging = false;
         ingrediente.SetActive(false);
