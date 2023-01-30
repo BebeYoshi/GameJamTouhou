@@ -1101,8 +1101,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 644, y: 288}
-  m_SizeDelta: {x: 264.86, y: 54.63}
+  m_AnchoredPosition: {x: 681.62, y: 283.18}
+  m_SizeDelta: {x: 340.11, y: 64.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &339593286
 MonoBehaviour:
@@ -1124,7 +1124,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Highscore
+  m_text: 'Highscore: tESTES'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f88111cd398901e4a858a0b66018b7b6, type: 2}
   m_sharedMaterial: {fileID: 8432217497367893513, guid: f88111cd398901e4a858a0b66018b7b6, type: 2}
@@ -1676,9 +1676,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a904a17d47d9840a1078b82ab31e34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highScoreJorge: {fileID: 526684055}
-  highScoreSnowboard: {fileID: 953211360}
-  highScoreSnowballfight: {fileID: 1165159787}
+  highScoreJorge: {fileID: 339593286}
+  highScoreSnowboard: {fileID: 2025890796}
+  highScoreSnowballfight: {fileID: 1894077743}
   highScoreCooking: {fileID: 1163594997}
   triesJorge: {fileID: 526684055}
   triesSnowboard: {fileID: 953211360}
@@ -3153,8 +3153,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 644, y: -28}
-  m_SizeDelta: {x: 264.86, y: 54.63}
+  m_AnchoredPosition: {x: 661.37, y: -28}
+  m_SizeDelta: {x: 299.59, y: 54.63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1163594997
 MonoBehaviour:
@@ -3176,7 +3176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Highscore
+  m_text: 'Highscore: Testes'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f88111cd398901e4a858a0b66018b7b6, type: 2}
   m_sharedMaterial: {fileID: 8432217497367893513, guid: f88111cd398901e4a858a0b66018b7b6, type: 2}
@@ -5031,8 +5031,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -188, y: -74}
-  m_SizeDelta: {x: 264.86, y: 54.63}
+  m_AnchoredPosition: {x: -166.21, y: -74.093}
+  m_SizeDelta: {x: 308.43, y: 54.815}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1894077743
 MonoBehaviour:
@@ -5054,7 +5054,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: HighScore
+  m_text: 'HighScore: Testes'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f88111cd398901e4a858a0b66018b7b6, type: 2}
   m_sharedMaterial: {fileID: 8432217497367893513, guid: f88111cd398901e4a858a0b66018b7b6, type: 2}
@@ -5418,8 +5418,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -180, y: 301}
-  m_SizeDelta: {x: 264.86, y: 54.63}
+  m_AnchoredPosition: {x: -162.21, y: 294.5}
+  m_SizeDelta: {x: 300.43, y: 67.63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2025890796
 MonoBehaviour:
@@ -5441,7 +5441,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Highscore
+  m_text: 'Highscore: Testes'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f88111cd398901e4a858a0b66018b7b6, type: 2}
   m_sharedMaterial: {fileID: 8432217497367893513, guid: f88111cd398901e4a858a0b66018b7b6, type: 2}
