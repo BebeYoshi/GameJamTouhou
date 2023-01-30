@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class LinearTimer : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class LinearTimer : MonoBehaviour
     public float maxTime;
     float timeLeft;
     public GameObject TimesUp;
+    public TMP_Text TimeUp;
     public bool ended;
     private bool stopped;
 
@@ -47,9 +49,15 @@ public class LinearTimer : MonoBehaviour
             TimerBar.fillAmount = timeLeft / maxTime;
         } else
         {
-            TimesUp.SetActive(true);
+            StartCoroutine(disableTimeUp());
             //Time.timeScale = 0;
             ended = true;
         }
+    }
+    IEnumerator disableTimeUp()
+    {
+        TimesUp.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        TimeUp.SetText("");
     }
 }
