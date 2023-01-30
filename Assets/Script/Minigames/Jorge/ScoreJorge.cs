@@ -31,7 +31,6 @@ public class ScoreJorge : MonoBehaviour
     public void FinaldeJogo()
     {
         Info_Player.coins += (score / 50);
-        uiGameOver.ToggleCanvas();
         Info_Player.tries_jorge++;
         if (Info_Player.score_jorge < score)
         {
@@ -42,6 +41,7 @@ public class ScoreJorge : MonoBehaviour
         {
             uiGameOver.HighScore(false);
         }
+        uiGameOver.ToggleCanvas();
     }
 
     IEnumerator GiveTip()

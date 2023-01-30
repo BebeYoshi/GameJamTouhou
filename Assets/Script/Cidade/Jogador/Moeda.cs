@@ -13,10 +13,6 @@ public class Moeda : MonoBehaviour
     // Update is called once per frame
 
     void Start(){
-        Info_Player.coins = 300;
-        Info_Player.score_jorge = 2000;
-        Info_Player.score_snowballfight = 2000;
-        Info_Player.score_snowboard = 2000;
         moedas = Info_Player.coins;
         textoMoedas.SetText(moedas.ToString());
         textoItem.SetText("Buy the necessary items to end the winter! Press 'E' to interact");

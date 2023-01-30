@@ -1459,7 +1459,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 10956427}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: loadSceneB
+        m_MethodName: loadSceneF
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
