@@ -23,6 +23,7 @@ public class Chawan : MonoBehaviour
 
     private void OnMouseDown()
     {
+        this.gameObject.GetComponent<SoundEffectPlayer>().Play1();
         Cursor.SetCursor(GrabTexture, Vector2.zero, CursorMode.Auto);
         ingrediente.GetComponent<CookingObject>().offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
         ingrediente.GetComponent<CookingObject>().dragging = true;
@@ -31,6 +32,7 @@ public class Chawan : MonoBehaviour
 
     private void OnMouseUp()
     {
+        this.gameObject.GetComponent<SoundEffectPlayer>().Play2();
         var col = ingrediente.GetComponent<Collider2D>();
         var colSopa = Sopa.GetComponent<Collider2D>();
         if (col.IsTouching(colSopa))
