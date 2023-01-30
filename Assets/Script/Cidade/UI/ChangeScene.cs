@@ -30,4 +30,8 @@ public class ChangeScene : MonoBehaviour
     public void loadSceneF(){
         SceneManager.LoadScene("Beginning");
     }
+
+    public void loadSceneH(){
+        SceneManager.LoadScene("Cooking");
+    }
 }

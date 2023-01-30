@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Snowballfight.unity
     guid: 37961d3ccee24554abdb5e7b3506f658
   - enabled: 1
+    path: Assets/Scenes/Cooking.unity
+    guid: 2b1ff4721ea856e4f9000d20b3661416
+  - enabled: 1
     path: Assets/Scenes/Jorge.unity
     guid: dcb983a2df8f1954d957cded724a9dd4
   - enabled: 1
