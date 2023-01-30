@@ -16,10 +16,6 @@ public class Ending_UI : MonoBehaviour
     public GameObject statisticsPanel;
     void Start()
     {
-            highScoreJorge.SetText("Highscore: " + Info_Player.score_jorge.ToString());
-            highScoreSnowboard.SetText("Highscore: " + Info_Player.score_snowboard.ToString());
-            highScoreSnowballfight.SetText("Highscore: " + Info_Player.score_snowballfight.ToString());
-            highScoreCooking.SetText("Highscore: " + Info_Player.score_sopa.ToString());
             triesJorge.SetText("Total Tries: " + Info_Player.tries_jorge.ToString());
             triesSnowboard.SetText("Total Tries: " + Info_Player.tries_snowboard.ToString());
             triesSnowballfight.SetText("Total Tries: " + Info_Player.tries_snowballfight.ToString());
@@ -30,6 +26,10 @@ public class Ending_UI : MonoBehaviour
     public void ToggleCanvas(){
         if(!statisticsPanel.activeSelf){
             statisticsPanel.SetActive(true);
+            highScoreJorge.SetText("Highscore: " + Info_Player.score_jorge.ToString());
+            highScoreSnowboard.SetText("Highscore: " + Info_Player.score_snowboard.ToString());
+            highScoreSnowballfight.SetText("Highscore: " + Info_Player.score_snowballfight.ToString());
+            highScoreCooking.SetText("Highscore: " + Info_Player.score_sopa.ToString());
         }
         else{
             statisticsPanel.SetActive(false);
