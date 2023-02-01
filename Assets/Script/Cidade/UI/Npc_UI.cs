@@ -116,7 +116,6 @@ public class Npc_UI : MonoBehaviour
     }
 
     public void buyItem(){
-        Info_Player.item_snowboard = true;
         buyButton.interactable = false;
         switch(tipo){
             case 0:
