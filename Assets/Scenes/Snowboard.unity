@@ -2976,15 +2976,15 @@ MonoBehaviour:
   rockPrefab_variant1: {fileID: 7782036681027268922, guid: 578960715b11a0040b1e033e40a94829, type: 3}
   rockPrefab_variant2: {fileID: 7716846626704907595, guid: 2052675f075874343b2b51f6080391fc, type: 3}
   rockPrefab_variant3: {fileID: 3225739922423364524, guid: 8e811858c1a78e24dbb3654373998fbe, type: 3}
-  trunkPrefab_variant1: {fileID: 5412267771600897650, guid: 5a133455bf762df49b1a8ab7fadf145a, type: 3}
-  trunkPrefab_variant2: {fileID: 5737283091418684526, guid: 4a92afffcd41b224e93f4bdf57f7d004, type: 3}
+  trunkPrefab_variant1: {fileID: 3708936522003859474, guid: 55d49be5b1197b547b3d05da7a86e342, type: 3}
+  trunkPrefab_variant2: {fileID: 2999857580448271518, guid: 4a92afffcd41b224e93f4bdf57f7d004, type: 3}
   blockagePrefab_variant1: {fileID: 2334186553304298379, guid: 6c23597f05abe5c478a7e1c5482c08e7, type: 3}
   blockagePrefab_variant2: {fileID: 2335836780305112045, guid: 3052d0188a8e98e41ab57eee5abf936c, type: 3}
   rockPrefab_multiple_variant1: {fileID: 1263741429688974858, guid: 40e3c70e431f8734994a366520ae3fa6, type: 3}
   rockPrefab_multiple_variant2: {fileID: 5822481291482310624, guid: 5db9729dc02d09547862b3301af42e3e, type: 3}
   rockPrefab_multiple_variant3: {fileID: 5502523015398704071, guid: 9f8b207b120943345ab4a4ec6d9440ff, type: 3}
-  trunkPrefab_multiple_variant1: {fileID: 4754853561305382765, guid: 791cc32e5bfda1b43b2cad4e99ffb149, type: 3}
-  trunkPrefab_multiple_variant2: {fileID: 6825733220889498476, guid: f39198663359dd849a353c86f646e957, type: 3}
+  trunkPrefab_multiple_variant1: {fileID: 6872642856256785467, guid: 791cc32e5bfda1b43b2cad4e99ffb149, type: 3}
+  trunkPrefab_multiple_variant2: {fileID: 1062064849449290483, guid: f39198663359dd849a353c86f646e957, type: 3}
   blockagePrefab_multiple_variant1: {fileID: 6416368199951712534, guid: b321f01c0b5991346801d19b580f0216, type: 3}
   blockagePrefab_multiple_variant2: {fileID: 7290807802735736618, guid: b7c8572fd2737bc42bf3f79a189b7e00, type: 3}
   spawnerInterval: 0
@@ -3205,8 +3205,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1028119697}
   m_LocalRotation: {x: -0.00947989, y: 0.00289059, z: 0.37592828, w: 0.92659575}
-  m_LocalPosition: {x: -12.17, y: 6.86, z: -0.15}
-  m_LocalScale: {x: 14.2948, y: 1.9496, z: 1}
+  m_LocalPosition: {x: -14.93, y: 10.47, z: -0.15}
+  m_LocalScale: {x: 23.576412, y: 3.0035536, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
